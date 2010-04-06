@@ -6,6 +6,7 @@
   <head>
   <?php print $head; ?>
   <title><?php print $head_title; ?></title>
+    <meta http-equiv="Content-Style-Type" content="text/css" />
   <?php print $styles; ?>
    <!--[if IE 6]><link rel="stylesheet" href="<?php echo $base_path . $directory; ?>/style.ie6.css" type="text/css" /><![endif]-->
   <?php print $scripts; ?>
