@@ -1,0 +1,133 @@
+/* $Id$ */
+
+#wrapper-front{
+width:953px;
+margin:0 auto;
+bottom: 35px;
+position: relative
+}
+
+#preface-wrapper-front {
+width:953px;
+margin:0 auto;
+bottom: 40px;
+position: relative
+}
+
+#wrapper{
+width:953px;
+margin: 0 auto;
+padding-top: 15px;
+}
+
+#preface-wrapper {
+width:953px;
+margin: 0 auto;
+padding-top: 15px;
+}
+
+#content-front {
+width: 99%;
+float: left;
+}
+
+#content {
+width: 99%;
+float: left;
+padding-top: 0px;
+}
+
+#sidebar-left h2, #sidebar-right h2 {
+background: #e6e6e6;
+padding-top: 4px;
+padding-bottom: 4px;
+font-size: 1.3em;
+padding-left: 15px;
+padding-right: 15px;
+border-bottom: 1px solid #bbb;
+border-top: 1px solid #ddd;
+border-left: 1px solid #ddd;
+}
+
+#bottom-1 h2, #bottom-2 h2, #bottom-3 h2, #bottom-4 h2, #preface-1 h2, #preface-2 h2, #preface-3 h2, #preface-4 h2 {
+font-size: 1.3em;
+margin-bottom: -5px;
+margin-top: 10px;
+}
+
+#sidebar-left .block .content, #sidebar-right .block .content{
+background: #f4f4f4;
+padding-left: 10px;
+padding-right: 10px;
+padding-bottom: 10px;
+}
+
+#bottom-1 .block .content, #bottom-2 .block .content, #bottom-3 .block .content, #bottom-4 .block .content, #preface-first .block .content, #preface-middle .block .content, #preface-last .block .content{
+padding-bottom: 10px;
+
+}
+
+#sidebar-left .block, #sidebar-right .block{
+background: #f4f4f4;
+border-right: 1px solid #bbb;
+border-bottom: 1px solid #bbb;
+border-left: 1px solid #ddd;
+}
+
+#bottom-1 .block ,#bottom-2 .block ,#bottom-3 .block ,#bottom-4 .block, #preface-first .block ,#preface-middle .block ,#preface-last .block {
+}
+
+#preface-first {
+width: 31.1%;
+float: left;
+margin-right: 2%;
+padding-top: 5px;
+}
+
+#preface-middle {
+width: 31.1%;
+float: left;
+margin-right: 2%;
+padding-top: 5px;
+}
+
+#preface-last {
+width: 31.1%;
+float: left;
+padding-top: 5px;
+}
+
+
+#bottom-1{
+width: 23.5%;
+float: left;
+margin-right: 2%;
+padding-bottom: 15px;
+}
+
+#bottom-2{
+width: 23.5%;
+float: left;
+margin-right: 2%;
+padding-bottom: 15px;
+}
+
+#bottom-3{
+width: 23.5%;
+float: left;
+padding-bottom: 15px;
+}
+
+#bottom-4{
+width: 23.5%;
+float: right;
+padding-bottom: 15px;
+}
+
+.content-top, .content-middle, .content-bottom {
+padding-bottom: 20px;
+}
+
+.content-top h2, .content-middle h2, .content-bottom h2, .content-top .content, .content-middle .content, .content-bottom .content {
+margin-top: 20px;
+}
