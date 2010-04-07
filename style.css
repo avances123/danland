@@ -443,8 +443,21 @@ padding-bottom: 1em;
 border-bottom: 1px solid #bbb;
 }
 
-.content-top, .content-bottom {
-margin: .5em 0 1em; /* LTR */
+.content-top{
+margin: .5em 0 2em; /* LTR */
+padding-left: 1.2em;
+padding-right: 1.2em;
+padding-top: .1em;
+padding-bottom: .1em;
+border-bottom: 1px solid #bbb;
+border-right: 1px solid #bbb;
+border-left: 1px solid #ddd;
+border-top: 1px solid #ddd;
+background-color: #f4f4f4;;
+}
+
+.content-bottom {
+margin: 1.5em 0 1em; /* LTR */
 padding-left: 1.2em;
 padding-right: 1.2em;
 padding-top: .1em;
