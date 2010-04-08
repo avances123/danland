@@ -63,27 +63,30 @@
 </div>
 </div>
 
-<?php if ($preface_first || $preface_middle || $preface_last): ?>
-      <div id="preface-wrapper-front">
- 	  <div id="container">
-        <?php if ($preface_first): ?>
-        <div id="preface-first">
-          <?php print $preface_first; ?>
-        </div><!-- /preface-first -->
-        <?php endif; ?>
-        <?php if ($preface_middle): ?>
-        <div id="preface-middle">
-          <?php print $preface_middle; ?>
-        </div><!-- /preface-middle -->
-        <?php endif; ?>
-        <?php if ($preface_last): ?>
-        <div id="preface-last">
-          <?php print $preface_last; ?>
-        </div><!-- /preface-last -->
-        <?php endif; ?>
-      </div>
-	<div style="clear:both"></div>
-     </div><!-- /preface-wrapper -->
+ <?php if($preface_first || $preface_middle || $preface_last) : ?>
+    <div style="clear:both"></div>
+    <div id="preface-wrapper-front" class="in<?php print (bool) $preface_first + (bool) $preface_middle + (bool) $preface_last; ?>">
+      <div class="border">
+        <div class="center">
+          <?php if($preface_first) : ?>
+          <div class="column A">
+            <?php print $preface_first; ?>
+          </div>
+          <?php endif; ?>
+          <?php if($preface_middle) : ?>
+          <div class="column B">
+            <?php print $preface_middle; ?>
+          </div>
+          <?php endif; ?>
+          <?php if($preface_last) : ?>
+          <div class="column C">
+            <?php print $preface_last; ?>
+          </div>
+          <?php endif; ?>
+        </div><!-- Center -->
+      <div style="clear:both"></div>
+      </div><!-- Border -->
+    </div>
     <?php endif; ?>
 
 
@@ -120,33 +123,37 @@
 
  <div style="clear:both"></div>
 
- <?php if ($bottom_1 || $bottom_2 || $bottom_3 || $bottom_4): ?>
-      <div id="bottom-wrapper-front">
- 	  <div class="spacer">
-        <?php if ($bottom_1): ?>
-        <div id="bottom-1">
-          <?php print $bottom_1; ?>
-        </div><!-- /bottom-1 -->
-        <?php endif; ?>
-        <?php if ($bottom_2): ?>
-        <div id="bottom-2">
-          <?php print $bottom_2; ?>
-        </div><!-- /bottom-2 -->
-        <?php endif; ?>
-        <?php if ($bottom_3): ?>
-        <div id="bottom-3">
-          <?php print $bottom_3; ?>
-        </div><!-- /bottom-3 -->
-        <?php endif; ?>
-	<?php if ($bottom_4): ?>
-        <div id="bottom-4">
-          <?php print $bottom_4; ?>
-        </div><!-- /bottom-4 -->
-        <?php endif; ?>
-      </div>
-	<div style="clear:both"></div>
-     </div><!-- /bottom-wrapper -->
+ <?php if($bottom_1 || $bottom_2 || $bottom_3 || $bottom_4) : ?>
+    <div style="clear:both"></div><!-- Do not touch -->
+    <div id="bottom-wrapper-front" class="in<?php print (bool) $bottom_1 + (bool) $bottom_2 + (bool) $bottom_3 + (bool) $bottom_4; ?>">
+      <div class="center">
+        <div class="space">
+          <?php if($bottom_1) : ?>
+          <div class="column A">
+            <?php print $bottom_1; ?>
+          </div>
+          <?php endif; ?>
+          <?php if($bottom_2) : ?>
+          <div class="column B">
+            <?php print $bottom_2; ?>
+          </div>
+          <?php endif; ?>
+          <?php if($bottom_3) : ?>
+          <div class="column C">
+            <?php print $bottom_3; ?>
+          </div>
+          <?php endif; ?>
+          <?php if($bottom_4) : ?>
+          <div class="column D">
+            <?php print $bottom_4; ?>
+          </div>
+          <?php endif; ?>
+        </div><!-- Space -->
+      </div><!-- Center -->
+      <div style="clear:both"></div>
+    </div><!-- Bottom -->
     <?php endif; ?>
+
 
 <div id="footer-wrapper-front">
 <div id="footer">
