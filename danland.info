@@ -3,6 +3,8 @@
 name = Danland
 description = Premium Drupal Theme provided by <a href="http://www.danetsoft.com">Danetsoft</a> and developed by <a href="http://www.xpsdev.com">Danang Probo Sayekti</a>.
 engine = phptemplate
+stylesheets[all][] = style.css
+;stylesheets[all][] = local.css
 regions[preface] = Preface top
 regions[preface_first] = Preface first
 regions[preface_middle] = Preface middle
@@ -28,4 +30,3 @@ features[] = node_user_picture
 features[] = primary_links
 features[] = secondary_links
 core = "6.x"
-
