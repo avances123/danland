@@ -58,8 +58,7 @@
  <?php endif; ?>
 </div>
 <?php if ($mission) : ?><div id="banner-bottom">
-<div id="mission"><?php print $mission; ?></div><?php endif; ?>
-</div>
+<div id="mission"><?php print $mission; ?></div></div><?php endif; ?>
 </div>
 </div>
 
