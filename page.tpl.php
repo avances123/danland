@@ -146,6 +146,7 @@
 <li><?php if (isset($secondary_links)) : ?><?php print theme('links', $secondary_links, array('class' => 'links', 'id' => 'subnav')); ?><?php endif; ?></li></ul>
 </div>
 </div>
+<div id="balance"></div>
 <div id="notice"><p><a href="http://www.danetsoft.com">Drupal theme</a> provided by <a href="http://www.xpsdev.com">Danang Probo Sayekti</a>.</p></div>
 <?php print $closure; ?>
 </body>
