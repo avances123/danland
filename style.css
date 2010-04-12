@@ -311,93 +311,111 @@ margin: 0 auto;
 #container {
 margin: 0 auto;
 width: 99%;
-
 }
 
 #content-front {
 width: 99%;
 float: left;
-padding-top: 8px;
 }
 
 #content {
 width: 99%;
 float: left;
-padding-top: 15px;
 }
 
 #sidebar-side-1 #sidebar-left {
 width: 26%;
 float: left;
 margin-right: 2%;
-margin-bottom: 15px	
+padding-top: 15px;	
 }
 
 #sidebar-side-2 #sidebar-left {
 width: 21%;
 float: left;
 margin-right: 2%;
-margin-bottom: 15px	
+padding-top: 15px;	
 }
 
 .sidebars-1 #content-front{
 width: 68%;
 padding-left: 25px;
 float: left;
+padding-top: 15px;
 }
 
 .sidebars-1 #content{
 width: 68%;
 padding-left: 25px;
 float: left;
+padding-top: 15px;
 }
 
 .sidebars-2 #content-front{
 width: 54%;
 float: left;
+padding-top: 15px;
 }
 
 .sidebars-2 #content{
 width: 54%;
 float: left;
+padding-top: 15px;
 }
 
 #sidebar-side-1 #sidebar-right {
 width: 26%;
 float: right;
-margin-bottom: 15px;	      
+padding-top: 15px;	      
 }
 
 #sidebar-side-2 #sidebar-right {
 width: 21%;
 float: right;
-margin-bottom: 15px;	      
+padding-top: 15px;	      
 }
 
-#sidebar-left h2, #sidebar-right h2 {
+#sidebar-left .block,
+#sidebar-right .block {
+margin-bottom: 10px;
+}
+
+#sidebar-left h2.block-title,
+#sidebar-right h2.block-title {
 background: #e6e6e6;
-padding-top: 4px;
-padding-bottom: 4px;
-font-size: 1.3em;
-padding-left: 15px;
-padding-right: 15px;
-border-bottom: 1px solid #bbb;
-border-top: 1px solid #ddd;
-border-left: 1px solid #ddd;
-}
-
-#sidebar-left .block .content, #sidebar-right .block .content{
-background: #f4f4f4;
+margin:0;
+padding-top: 5px;
+padding-bottom: 5px;
 padding-left: 10px;
 padding-right: 10px;
-padding-bottom: 10px;
+font-size: 1.3em;
+border-right: 1px solid #bbb;
+border-left: 1px solid #ddd;
+border-top: 1px solid #ddd;
 }
 
-#sidebar-left .block, #sidebar-right .block{
-background: #f4f4f4;
+#sidebar-left .block-content,
+#sidebar-right .block-content {
+background-color: #f4f4f4;
 border-right: 1px solid #bbb;
 border-bottom: 1px solid #bbb;
 border-left: 1px solid #ddd;
+border-top: 1px solid #ddd;
+}
+
+#sidebar-left .block-inner,
+#sidebar-right .block-inner {
+padding-top: 5px;
+}
+#sidebar-left .block-content,
+#sidebar-right .block-content {
+  
+}
+
+#sidebar-left .block-content-inner,
+#sidebar-right .block-content-inner {
+margin: 0;
+padding: 5px 15px 5px 15px;
 }
 
 .submitted {
@@ -412,10 +430,6 @@ text-decoration: underline;
 #help {
 font-size: 0.9em;
 margin-bottom: 1em;
-}
-
-.breadcrumb {
-margin-bottom: .5em;
 }
 
 .messages {
@@ -437,6 +451,7 @@ border-top: 1px solid #ddd;
 padding-top: 0.3em;
 padding-bottom: 0.3em;
 margin-bottom: 1em;
+margin-top: .4em;
 padding-left: 10px;
 padding-right: 10px;
 }
@@ -898,15 +913,16 @@ bottom: 30px;
 }
 
 #bottom-wrapper-front .column {
-  float: left;
-padding-bottom: 13px;
+float: left;
+padding-bottom: 15px;
+padding-top: 5px;
 }
 
 #bottom-wrapper-front h2, #bottom-wrapper h2 {
-  font-size: 1.3em;
-  padding-top: 4px;
-  padding-bottom: 4px;
-  margin-bottom: -5px;
+font-size: 1.3em;
+padding-top: 5px;
+padding-bottom: 5px;
+margin-bottom: -5px;
 }
 
 #bottom-wrapper-front.in1 .column {
@@ -938,11 +954,14 @@ border-top: 1px solid #ddd;
 margin: 0 auto;
 text-align: left;
 width: 953px;
+position: relative;
+top: 20px;
 }
 
 #bottom-wrapper .column {
-  float: left;
-padding-bottom: 13px;
+float: left;
+padding-bottom: 15px;
+padding-top: 5px;
 }
 #bottom-wrapper.in1 .column {
 width: 96%;
@@ -975,6 +994,8 @@ bottom: 30px;
 #footer-wrapper {
 width: 953px;
 margin: 0 auto;
+position: relative;
+top: 20px;
 }
 
 #subnav {
@@ -1069,6 +1090,10 @@ padding-bottom: 20px;
 
 #aggregator {
 padding-bottom: 20px;
+}
+
+#balance {
+height: 50px;
 }
 
 #notice {
