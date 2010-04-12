@@ -3,7 +3,7 @@
 #wrapper-front{
 width:953px;
 margin:0 auto;
-bottom: 35px;
+bottom: 40px;
 position: relative
 }
 
@@ -17,37 +17,21 @@ position: relative
 #wrapper{
 width:953px;
 margin: 0 auto;
-padding-top: 15px;
 }
 
 #preface-wrapper {
 width:953px;
 margin: 0 auto;
-padding-top: 15px;
 }
 
 #content-front {
 width: 99%;
 float: left;
-
 }
 
 #content {
 width: 99%;
 float: left;
-padding-top: 0px;
-}
-
-#sidebar-left h2, #sidebar-right h2 {
-background: #e6e6e6;
-padding-top: 4px;
-padding-bottom: 4px;
-font-size: 1.3em;
-padding-left: 15px;
-padding-right: 15px;
-border-bottom: 1px solid #bbb;
-border-top: 1px solid #ddd;
-border-left: 1px solid #ddd;
 }
 
 #bottom-wrapper-front h2, #bottom-wrapper h2, #preface-wrapper-front h2, #preface-wrapper h2 {
@@ -56,66 +40,58 @@ margin-bottom: -5px;
 margin-top: 10px;
 }
 
-#sidebar-left .block .content, #sidebar-right .block .content{
-background: #f4f4f4;
-padding-left: 10px;
-padding-right: 10px;
-padding-bottom: 10px;
-}
-
 #bottom-wrapper-front .content, #bottom-wrapper .content, #preface-wrapper-front .content, #preface-wrapper .content{
 padding-bottom: 10px;
-}
-
-#sidebar-left .block, #sidebar-right .block{
-background: #f4f4f4;
-border-right: 1px solid #bbb;
-border-bottom: 1px solid #bbb;
-border-left: 1px solid #ddd;
 }
 
 #preface-wrapper-front .column {
   float: left;
 }
 #preface-wrapper-front.in1 .column {
-  width: 96%;
+width: 96%;
 margin-right: 1%;
-  margin-left: 1%;
-  padding-top: 5px;
+margin-left: 1%;
+padding-top: 5px;
+padding-bottom: 5px;
 }
 #preface-wrapper-front.in2 .column {
-  width: 46.65%;
-  margin-right: 1%;
-  margin-left: 1%;
-  padding-top: 5px;
+width: 46.65%;
+margin-right: 1%;
+margin-left: 1%;
+padding-top: 5px;
+padding-bottom: 5px;
 }
 #preface-wrapper-front.in3 .column {
-  width: 30%;
-  margin-right: 1%;
-  margin-left: 1%;
-  padding-top: 5px;
+width: 30%;
+margin-right: 1%;
+margin-left: 1%;
+padding-top: 5px;
+padding-bottom: 5px;
 }
 
 #preface-wrapper .column {
-  float: left;
+float: left;
 }
 #preface-wrapper.in1 .column {
-  width: 98%;
-  margin-right: 1%;
-  margin-left: 1%;
-  padding-top: 5px;
+width: 98%;
+margin-right: 1%;
+margin-left: 1%;
+padding-top: 5px;
+padding-bottom: 5px;
 }
 #preface-wrapper.in2 .column {
-  width: 46.65%;
-  margin-right: 1%;
-  margin-left: 1%;
-  padding-top: 5px;
+width: 46.65%;
+margin-right: 1%;
+margin-left: 1%;
+padding-top: 5px;
+padding-bottom: 5px;
 }
 #preface-wrapper.in3 .column {
-  width: 30%;
-  margin-right: 1%;
-  margin-left: 1%;
-  padding-top: 5px;
+width: 30%;
+margin-right: 1%;
+margin-left: 1%;
+padding-top: 5px;
+padding-bottom: 5px;
 }
 
 #bottom-wrapper-front.in1 .column {
@@ -123,28 +99,29 @@ width: 95%;
 margin-right: 1%;
 margin-left: 1%;
 padding-top: 15px;
-padding-bottom: 15px;
+padding-bottom: 20px;
+
 }
 #bottom-wrapper-front.in2 .column {
 width: 45.65%;
 margin-right: 1%;
 margin-left: 1%;
 padding-top: 15px;
-padding-bottom: 15px;
+padding-bottom: 20px;
 }
 #bottom-wrapper-front.in3 .column {
 width: 30.1%;
 margin-right: 1%;
 margin-left: 1%;
 padding-top: 15px;
-padding-bottom: 15px;
+padding-bottom: 20px;
 }
 #bottom-wrapper-front.in4 .column {
 width: 22%;
 margin-right: 1%;
 margin-left: 1%;
 padding-top: 15px;
-padding-bottom: 15px;
+padding-bottom: 20px;
 }
 
 #bottom-wrapper.in1 .column {
@@ -152,7 +129,7 @@ width: 95%;
 margin-right: 1%;
 margin-left: 1%;
 padding-top: 15px;
-padding-bottom: 15px;
+padding-bottom: 20px;
 }
 #bottom-wrapper.in2 .column {
 width: 45.65%;
@@ -166,19 +143,19 @@ width: 30.1%;
 margin-right: 1%;
 margin-left: 1%;
 padding-top: 15px;
-padding-bottom: 15px;
+padding-bottom: 20px;
 }
 #bottom-wrapper.in4 .column {
 width: 22%;
 margin-right: 1%;
 margin-left: 1%;
 padding-top: 15px;
-padding-bottom: 15px;
+padding-bottom: 20px;
 }
 
 
 .content-top, .content-middle, .content-bottom {
-padding-bottom: 20px;
+padding-bottom: 10px;
 }
 
 .content-top{
