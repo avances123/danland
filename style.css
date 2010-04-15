@@ -205,16 +205,22 @@ z-index:1;
 float:left;
 position:absolute;
 text-align:left;
-z-index:3;
+z-index:4;
 }
 
 .slideshow {
 width:950px;
-margin:0 auto;
 height:355px;
 padding: 0 3px 0 0;
 position:relative;
-z-index:1;
+z-index:2;
+}
+
+.slideshow IMG {
+position:absolute;
+top:0;
+left:0;
+z-index:8;
 }
 
 #preface {
@@ -243,7 +249,7 @@ position:absolute;
 bottom:0;
 left:0;
 text-align:right;
-z-index:2;
+z-index:3;
 }
 
 #preface-wrapper-front {
