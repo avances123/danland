@@ -74,9 +74,9 @@ $(document).ready(function() {
 <?php if ($mission) : ?><div id="banner-bottom">
 <div id="mission"><?php print $mission; ?></div></div><?php endif; ?>
 <div class="slideshow">
-<img src="<?php print $base_path . $directory; ?>/images/banners/sea.jpg" width="950px" height="355px"/>
-<img src="<?php print $base_path . $directory; ?>/images/banners/noon.jpg" width="950px" height="355px"/>
-<img src="<?php print $base_path . $directory; ?>/images/banners/snow.jpg" width="950px" height="355px"/>
+<img src="<?php print $base_path . $directory; ?>/images/banners/sea.jpg" width="950px" height="355px" alt="Banner 1"/>
+<img src="<?php print $base_path . $directory; ?>/images/banners/noon.jpg" width="950px" height="355px" alt="Banner 2"/>
+<img src="<?php print $base_path . $directory; ?>/images/banners/snow.jpg" width="950px" height="355px" alt="Banner 3"/>
 </div>
 </div>
 </div>
