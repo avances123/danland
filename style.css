@@ -199,7 +199,22 @@ height:355px;
 padding: 0 3px 0 0;
 position:relative;
 z-index:1;
-background: url(images/sea.jpg) no-repeat;
+}
+
+#banner-preface {
+float:left;
+position:absolute;
+text-align:left;
+z-index:3;
+}
+
+.slideshow {
+width:950px;
+margin:0 auto;
+height:355px;
+padding: 0 3px 0 0;
+position:relative;
+z-index:1;
 }
 
 #preface {
@@ -525,10 +540,15 @@ font-size: 0.9em;
 padding-left: 1em; /* LTR */
  }
 
-.node .picture {
-border: 1px solid #bbb;
+.node .picture, .comment .picture {
+border: 1px solid #cccccc;
 float: right; /* LTR */
-margin: 0.5em;
+padding: 4px;
+}
+
+.picture {
+border: 1px solid #cccccc;
+padding: 4px;
 }
 
 .comment {
@@ -550,11 +570,7 @@ text-align: right; /* LTR */
 font-weight: normal;
 float: right; /* LTR */
 color: red;
-}
-
-.comment .picture {
-float: right; /* LTR */
-margin: 0.5em;
+margin:.5em;
 }
 
 .feed-item-body {
@@ -592,10 +608,6 @@ font-style: italic;
 text-decoration: none;
 }
 
-#forum {
-padding-bottom: 20px;
-}
-
 #forum table {
 width: 100%;
 }
@@ -626,9 +638,6 @@ border: 1px solid #bbb;
 padding-top: 0.7em;
 }
 
-#tracker {
-padding-bottom: 20px;
-}
 
 #tracker table {
 width: 100%;
@@ -651,7 +660,6 @@ background-color: #f4f4f4;;
 }
 
 .profile dl {
-padding-top: 10px;
 }
 
 .block-forum h3 {
@@ -1042,54 +1050,6 @@ padding-top: 20px;
 padding-bottom: 20px;
 font-size: 12px;
 border-top: 1px solid #bbb;
-}
-
-#contact-mail-page {
-padding-bottom: 20px;
-}
-
-#contact-mail-user {
-padding-bottom: 20px;
-}
-
-#node-form {
-padding-bottom: 20px;
-}
-
-#openid-user-add {
-padding-bottom: 20px;
-}
-
-#user-profile-form {
-padding-bottom: 20px;
-}
-
-#book-outline {
-padding-bottom: 20px;
-}
-
-#user-register {
-padding-bottom: 20px;
-}
-
-#user-login {
-padding-bottom: 20px;
-}
-
-#user-pass {
-padding-bottom: 20px;
-}
-
-#comment-form {
-padding-bottom: 20px;
-}
-
-#filter-filter-1 {
-padding-bottom: 20px;
-}
-
-#aggregator {
-padding-bottom: 20px;
 }
 
 #balance {
