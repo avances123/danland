@@ -10,6 +10,15 @@
   <?php print $styles; ?>
    <!--[if IE 6]><link rel="stylesheet" href="<?php echo $base_path . $directory; ?>/style.ie6.css" type="text/css" /><![endif]-->
   <?php print $scripts; ?>
+<!--[if lt IE 7]>
+        		<script type="text/javascript" src="<?php print $base_path . $directory; ?>/jquery.pngFix.js"></script>
+	<![endif]--> 
+<script type="text/javascript"> 
+    $(document).ready(function(){ 
+        $(document).pngFix(); 
+    }); 
+</script>
+
  </head>
 
 <body<?php print phptemplate_body_class($left, $right); ?>>

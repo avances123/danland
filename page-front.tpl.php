@@ -16,6 +16,14 @@ $(document).ready(function() {
     $('.slideshow').cycle({
 		fx: 'fade' , timeout: 8000});
 });</script>
+<!--[if lt IE 7]>
+        		<script type="text/javascript" src="<?php print $base_path . $directory; ?>/jquery.pngFix.js"></script>
+	<![endif]--> 
+<script type="text/javascript"> 
+    $(document).ready(function(){ 
+        $(document).pngFix(); 
+    }); 
+</script>
  </head>
 
 <body<?php print phptemplate_body_class($left, $right); ?>>
