@@ -10,6 +10,12 @@
   <?php print $styles; ?>
    <!--[if IE 6]><link rel="stylesheet" href="<?php echo $base_path . $directory; ?>/style.ie6.css" type="text/css" /><![endif]-->
   <?php print $scripts; ?>
+  <script type="text/javascript" src="<?php print $base_path . $directory; ?>/jquery.cycle.min.js"></script>
+  <script type="text/javascript">
+$(document).ready(function() {
+    $('.slideshow').cycle({
+		fx: 'fade' , timeout: 8000});
+});</script>
  </head>
 
 <body<?php print phptemplate_body_class($left, $right); ?>>
@@ -59,6 +65,11 @@
 </div>
 <?php if ($mission) : ?><div id="banner-bottom">
 <div id="mission"><?php print $mission; ?></div></div><?php endif; ?>
+<div class="slideshow">
+<img src="<?php print $base_path . $directory; ?>/images/banners/sea.jpg" width="950px" height="355px"/>
+<img src="<?php print $base_path . $directory; ?>/images/banners/noon.jpg" width="950px" height="355px"/>
+<img src="<?php print $base_path . $directory; ?>/images/banners/snow.jpg" width="950px" height="355px"/>
+</div>
 </div>
 </div>
 
