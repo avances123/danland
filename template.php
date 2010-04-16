@@ -16,6 +16,7 @@ function phptemplate_body_class($left, $right) {
 		if(isset($id)) {
 		print ' id="'. $id .'"';
 	}
-}
 
-drupal_add_js('jquery.cycle.min.js');
+drupal_add_js(drupal_get_path('theme','danland').'/jquery.cycle.min.js'); 
+
+}
