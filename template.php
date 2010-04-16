@@ -17,5 +17,3 @@ function phptemplate_body_class($left, $right) {
 		print ' id="'. $id .'"';
 	}
 }
-
-drupal_add_js('jquery.cycle.min.js');
