@@ -5,6 +5,7 @@ description = Premium Drupal Theme provided by <a href="http://www.danetsoft.com
 engine = phptemplate
 stylesheets[all][] = style.css
 ;stylesheets[all][] = local.css
+regions[superfish_menu] = Superfish Menu
 regions[preface] = Preface top
 regions[preface_first] = Preface first
 regions[preface_middle] = Preface middle
