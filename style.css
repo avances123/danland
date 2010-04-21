@@ -226,6 +226,11 @@ background:transparent url(images/menu-hover.gif) repeat-x;
 background:transparent url(images/menu-hover.gif) repeat-x;
 }
 
+#superfish .menu li.active-trail li {
+background: #004f90;
+}
+
+
 #superfish .menu li li:hover {
 background: #004f90;
 }
