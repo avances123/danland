@@ -167,6 +167,74 @@ background:transparent url(images/menu-hover.gif) repeat-x;
 
 }
 
+#superfish {
+height:35px; 
+float:left;
+}
+
+#superfish h2 {
+height: 0;
+overflow: hidden;
+position: absolute;
+}
+
+#superfish .menu {
+float:left;
+height:35px;
+}
+
+#superfish .menu a, 
+#superfish .menu a:visited  { 
+color:#fff;
+text-decoration:none;
+font-size:12px;
+padding:11px 29px 0 29px;
+display:inline-block;
+font-weight:bold;
+height:25px;
+text-transform:uppercase;
+}
+
+#superfish .menu li {
+background: transparent;
+padding:0 3px 0 0;
+}
+
+#superfish .menu li li {
+background: #004f90;
+left: -1px;  
+}
+
+#superfish .menu li li li {
+background: #004f90;
+top: 0px;
+}
+
+#superfish .menu li:hover, 
+#superfish .menu li.sfHover,
+#superfish .menu a:focus, 
+#superfish .menu a:hover, 
+#superfish .menu a:active {
+z-index:10;
+}
+
+#superfish .menu li:hover {
+background:transparent url(images/menu-hover.gif) repeat-x;
+}
+
+#superfish .menu li.active-trail {
+background:transparent url(images/menu-hover.gif) repeat-x;
+}
+
+#superfish .menu li li:hover {
+background: #004f90;
+}
+
+#superfish .menu li li li:hover {
+background: #004f90;
+}
+
+
 #rounded-menu-left {
 height: 35px;
 background:transparent url(images/home-hover.gif) no-repeat;
