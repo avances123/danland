@@ -16,14 +16,16 @@ $(document).ready(function() {
     $('.slideshow').cycle({
 		fx: 'fade' , timeout: 8000});
 });</script>
-<!--[if lt IE 7]>
-        		<script type="text/javascript" src="<?php print $base_path . $directory; ?>/jquery.pngFix.js"></script>
-	<![endif]--> 
-<script type="text/javascript"> 
-    $(document).ready(function(){ 
-        $(document).pngFix(); 
-    }); 
+<!--[if IE 6]>
+        <script type="text/javascript" src="<?php print $base_path . $directory; ?>/jquery.pngFix.js"></script>
+<![endif]-->
+<!--[if IE 6]>
+<script type="text/javascript">
+    $(document).ready(function(){
+        $(document).pngFix();
+    });
 </script>
+<![endif]--> 
  </head>
 
 <body<?php print phptemplate_body_class($left, $right); ?>>
