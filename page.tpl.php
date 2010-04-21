@@ -10,11 +10,10 @@
   <?php print $styles; ?>
    <!--[if IE 6]><link rel="stylesheet" href="<?php echo $base_path . $directory; ?>/style.ie6.css" type="text/css" /><![endif]-->
   <?php print $scripts; ?>
-  <script type="text/javascript" src="<?php print $base_path . $directory; ?>/jquery.cycle.min.js"></script>
   <script type="text/javascript">
 $(document).ready(function() {
     $('.slideshow').cycle({
-		fx: 'fade' , timeout: 8000});
+		fx: 'fade' , timeout: 8000, delay: 2000});
 });</script>
 <!--[if IE 6]>
         <script type="text/javascript" src="<?php print $base_path . $directory; ?>/jquery.pngFix.js"></script>
@@ -25,7 +24,18 @@ $(document).ready(function() {
         $(document).pngFix();
     });
 </script>
-<![endif]--> 
+<![endif]-->
+<script type="text/javascript">
+  $(document).ready(function() {
+    $("#superfish ul.menu").superfish({ 
+            delay:       100,                           
+            animation:   {opacity:'show',height:'show'},  
+            speed:       'fast',                          
+            autoArrows:  true,                           
+            dropShadows: false                   
+        });
+  });
+</script>
  </head>
 
 
@@ -58,9 +68,19 @@ $(document).ready(function() {
 
 <div id="menu">
 <div id="rounded-menu-left"></div>
-<?php if (isset($primary_links)) : ?>
-			<?php print theme('links', $primary_links, array('class' => 'links', 'id' => 'nav')); ?>
-		<?php endif; ?>
+ <?php if ($primary_links || $superfish_menu): ?>
+      <!-- PRIMARY -->
+      <div id="<?php print $primary_links ? 'nav' : 'superfish' ; ?>">
+        <?php 
+					     if ($primary_links) {
+		          print theme('links', $primary_links); 
+				      }
+				      elseif (!empty($superfish_menu)) {
+				        print $superfish_menu;
+				      }
+        ?>
+      </div> <!-- /primary -->
+    <?php endif; ?>
 <div id="rounded-menu-right"></div>
 </div> <!-- end menu -->
 
