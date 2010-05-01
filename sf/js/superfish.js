@@ -9,9 +9,6 @@
  *
  * CHANGELOG: http://users.tpg.com.au/j_birch/plugins/superfish/changelog.txt
  */
-$(document).ready(function() {
-  $('#superfish-inner ul').superfish();
-});
  (function($){
 	$.fn.superfish = function(op){
 
