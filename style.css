@@ -512,6 +512,24 @@ margin: 0;
 padding: 5px 15px 5px 15px;
 }
 
+.content blockquote {
+background: url(images/bq-tl.png) no-repeat left top;
+padding-left: 20px;
+margin-left: 10px;
+font-style:italic;
+}
+
+.content blockquote p {
+background: url(images/bq-br.png) no-repeat right bottom;
+}
+
+code {
+background-color:#EDF1F3;
+font-family:"Bitstream Vera Sans Mono",Monaco,"Lucida Console",monospace;
+font-size:0.9em;
+line-height:1.2em;
+}
+
 .submitted {
 font-size: 0.9em;
 color: #999;
