@@ -11,7 +11,7 @@
    <!--[if IE 6]><link rel="stylesheet" href="<?php echo $base_path . $directory; ?>/style.ie6.css" type="text/css" /><![endif]-->
   <?php print $scripts; ?>
   <script type="text/javascript">
-$(document).ready(function() {
+jQuery(document).ready(function($) {
     $('.slideshow').cycle({
 		fx: 'fade' , timeout: 8000, delay: 2000});
 });</script>
@@ -20,13 +20,13 @@ $(document).ready(function() {
 <![endif]-->
 <!--[if IE 6]>
 <script type="text/javascript">
-    $(document).ready(function(){
+    jQuery(document).ready(function($) {
         $(document).pngFix();
     });
 </script>
 <![endif]-->
 <script type="text/javascript">
-  $(document).ready(function() {
+  jQuery(document).ready(function($) {
     $("#superfish ul.menu").superfish({ 
             delay:       100,                           
             animation:   {opacity:'show',height:'show'},  
@@ -37,7 +37,6 @@ $(document).ready(function() {
   });
 </script>
  </head>
-
 
 <body<?php print phptemplate_body_class($left, $right); ?>>
 <div id="header">
