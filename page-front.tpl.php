@@ -3,7 +3,7 @@
 ?><!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN"
   "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml" xml:lang="<?php print $language->language ?>" lang="<?php print $language->language ?>" dir="<?php print $language->dir ?>">
-  <head>
+ <head>
   <?php print $head; ?>
   <title><?php print $head_title; ?></title>
     <meta http-equiv="Content-Style-Type" content="text/css" />
@@ -11,7 +11,7 @@
    <!--[if IE 6]><link rel="stylesheet" href="<?php echo $base_path . $directory; ?>/style.ie6.css" type="text/css" /><![endif]-->
   <?php print $scripts; ?>
   <script type="text/javascript">
-$(document).ready(function() {
+jQuery(document).ready(function($) {
     $('.slideshow').cycle({
 		fx: 'fade' , timeout: 8000, delay: 2000});
 });</script>
@@ -20,13 +20,13 @@ $(document).ready(function() {
 <![endif]-->
 <!--[if IE 6]>
 <script type="text/javascript">
-    $(document).ready(function(){
+    jQuery(document).ready(function($)  {
         $(document).pngFix();
     });
 </script>
 <![endif]--> 
 <script type="text/javascript">
-  $(document).ready(function() {
+  jQuery(document).ready(function($) {
     $("#superfish ul.menu").superfish({ 
             delay:       100,                           
             animation:   {opacity:'show',height:'show'},  
