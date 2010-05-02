@@ -24,7 +24,11 @@ font-weight: bold;
 }
 
 a:hover {
-color:#cc6600;
+text-decoration: underline;
+}
+
+.logo-name a:hover {
+text-decoration: none;
 }
 
 .comment .new {
@@ -35,8 +39,33 @@ color: red;
 margin:.5em;
 }
 
+.comment .title {
+line-height: 1.2em;
+}
+
+.comment .title a:hover {
+text-decoration: none;
+}
+
 #subnav li a {
 font-weight:bold;
+}
+
+#subnav li a:hover {
+text-decoration: underline;
+color: #005a8c;/*#e87e17*/
+}
+
+.node .title {
+padding-bottom: 5px;
+}
+
+.title {
+line-height:1.2em;
+}
+
+.node .title a:hover {
+text-decoration: none;
 } 
 
 #mission-db {
