@@ -9,6 +9,34 @@ color: #000;
 margin: 0;
 padding: 0;
 line-height: 1.5em;
+}
+
+a:link {
+color: #005a8c;/*#e87e17*/
+text-decoration: none;
+font-weight: bold;
+}
+
+a:visited {
+color: #005a8c;/*#e87e17*/
+text-decoration: none;
+font-weight: bold;
+}
+
+a:hover {
+color:#cc6600;
+}
+
+.comment .new {
+text-align: right; /* LTR */
+font-weight: bold;
+float: right; /* LTR */
+color: red;
+margin:.5em;
+}
+
+#subnav li a {
+font-weight:bold;
 } 
 
 #mission-db {
