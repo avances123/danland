@@ -2,6 +2,15 @@
 
 /* Put your custom css and css overrides in this file */ 
 
+body {
+font-size: 84%;
+font-family: Verdana, Arial, Helvetica, sans-serif;
+color: #000;
+margin: 0;
+padding: 0;
+line-height: 1.5em;
+} 
+
 #mission-db {
 padding: 20px;
 font-size:1.6em;
