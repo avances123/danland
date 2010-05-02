@@ -60,7 +60,7 @@ line-height:1.2em;
 -------------------------------------------------------------- */
 
 h1 {
-font-size: 1.7em;
+font-size: 1.6em;
 }
 
 h2 {
@@ -750,8 +750,9 @@ font-style: italic;
   	
 }
 
-#aggregator h3 {
- }
+.feed-item-title {
+font-size: 1.4em;
+}
 
 #aggregator h3 a:hover {
 text-decoration: none;
