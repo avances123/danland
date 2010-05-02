@@ -523,7 +523,7 @@ font-style:italic;
 background: url(images/bq-br.png) no-repeat right bottom;
 }
 
-code {
+code, tt, pre {
 background-color:#EDF1F3;
 font-family:"Bitstream Vera Sans Mono",Monaco,"Lucida Console",monospace;
 font-size:0.9em;
