@@ -118,6 +118,7 @@ jQuery(document).ready(function($) {
 		<?php endif; ?>
 
 <div id="content">
+			<?php if ($mission) : ?><div id="mission-db"><?php print $mission; ?></div><?php endif; ?>
 			<?php if ($content_top) : ?><div class="content-top"><?php print $content_top; ?></div>
 			<?php endif; ?>
 			<?php if (!$is_front) print $breadcrumb; ?>
