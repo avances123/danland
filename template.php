@@ -18,6 +18,6 @@ function phptemplate_body_class($left, $right) {
 	}
 }
 
-drupal_add_js(drupal_get_path('theme', 'danland') . '/jquery.cycle.min.js');
+drupal_add_js(drupal_get_path('theme', 'danland') . '/jquery.cycle.all.js');
 drupal_add_js(drupal_get_path('theme', 'danland') . '/sf/js/superfish.js');
 drupal_add_css(drupal_get_path('theme', 'danland') . '/sf/css/superfish.css');
