@@ -620,6 +620,7 @@ background-color: #f4f4f4;;
 
 .title, .title a {
 margin: 0 auto;  /* decrease default margins for h<x>.title */
+line-height: 1.2em;
 }
 
 .node .content, .comment .content {
@@ -708,7 +709,8 @@ padding-bottom: 1em;
 background-color: #f4f4f4;
 }
 
-.comment .title a {
+.comment .title {
+line-height: 1.2em;
 }
 
 .comment .new {
@@ -1228,3 +1230,4 @@ padding-left: 10px;
 font-size: 12px; 
 line-height: 13px; 
 }
+
