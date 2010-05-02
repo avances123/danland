@@ -57,7 +57,7 @@ jQuery(document).ready(function($) {
         </div><!-- /search-box -->
 
 	<div id="authorize">
-      <ul><?php global $user; if ($user->uid != 0) { print '<li class="first">' .t('Logged in as&nbsp;'). '<a href="' .url('user/'.$user->uid). '">' .$user->name. '</a></li>'; print '<li><a href="' .url('logout'). '">' .t('Logout'). '</a></li>'; } else { print '<li class="first"><a href="' .url('user'). '">' .t('Login'). '</a></li>'; print '<li><a href="' .url('user/register'). '">' .t('Register'). '</a></li>'; } ?></ul>
+      <ul><?php global $user; if ($user->uid != 0) { print '<li class="first">' .t('Logged in as '). '<a href="' .url('user/'.$user->uid). '">' .$user->name. '</a></li>'; print '<li><a href="' .url('logout'). '">' .t('Logout'). '</a></li>'; } else { print '<li class="first"><a href="' .url('user'). '">' .t('Login'). '</a></li>'; print '<li><a href="' .url('user/register'). '">' .t('Register'). '</a></li>'; } ?></ul>
 	  <?php print $feed_icons; ?>
   </div>
 
@@ -96,9 +96,9 @@ jQuery(document).ready(function($) {
 <?php if ($mission) : ?><div id="banner-bottom">
 <div id="mission"><?php print $mission; ?></div></div><?php endif; ?>
 <div class="slideshow">
-<img src="<?php print $base_path . $directory; ?>/images/banners/sea.jpg" width="950px" height="355px" alt="Banner 1"/>
-<img src="<?php print $base_path . $directory; ?>/images/banners/noon.jpg" width="950px" height="355px" alt="Banner 2"/>
-<img src="<?php print $base_path . $directory; ?>/images/banners/snow.jpg" width="950px" height="355px" alt="Banner 3"/>
+<img src="<?php print $base_path . $directory; ?>/images/banners/sea.jpg" width="950" height="355" alt="Banner 1"/>
+<img src="<?php print $base_path . $directory; ?>/images/banners/noon.jpg" width="950" height="355" alt="Banner 2"/>
+<img src="<?php print $base_path . $directory; ?>/images/banners/snow.jpg" width="950" height="355" alt="Banner 3"/>
 </div>
 </div>
 </div>
@@ -204,7 +204,6 @@ jQuery(document).ready(function($) {
 <li><?php if (isset($secondary_links)) : ?><?php print theme('links', $secondary_links, array('class' => 'links', 'id' => 'subnav')); ?><?php endif; ?></li></ul>
 </div>
 </div>
-<div id="notice"><p><a href="http://www.danetsoft.com">Drupal theme</a> provided by <a href="http://www.xpsdev.com">Danang Probo Sayekti</a>.</p></div>
-<?php print $closure; ?>
+<div id="notice"><p>Theme provided by <a href="http://www.danetsoft.com">Danetsoft</a> under GPL license from <a href="http://www.xpsdev.com">Danang Probo Sayekti</a></p></div><?php print $closure; ?>
 </body>
 </html>
