@@ -421,52 +421,52 @@ float: left;
 width: 26%;
 float: left;
 margin-right: 2%;
-padding-top: 15px;	
+padding-top: 10px;	
 }
 
 #sidebar-side-2 #sidebar-left {
 width: 21%;
 float: left;
 margin-right: 2%;
-padding-top: 15px;	
+padding-top: 10px;	
 }
 
 .sidebars-1 #content-front{
 width: 68%;
 padding-left: 25px;
 float: left;
-padding-top: 15px;
+padding-top: 10px;
 }
 
 .sidebars-1 #content{
 width: 68%;
 padding-left: 25px;
 float: left;
-padding-top: 15px;
+padding-top: 10px;
 }
 
 .sidebars-2 #content-front{
 width: 54%;
 float: left;
-padding-top: 15px;
+padding-top: 10px;
 }
 
 .sidebars-2 #content{
 width: 54%;
 float: left;
-padding-top: 15px;
+padding-top: 10px;
 }
 
 #sidebar-side-1 #sidebar-right {
 width: 26%;
 float: right;
-padding-top: 15px;	      
+padding-top: 10px;	      
 }
 
 #sidebar-side-2 #sidebar-right {
 width: 21%;
 float: right;
-padding-top: 15px;	      
+padding-top: 10px;	      
 }
 
 #sidebar-left .block,
