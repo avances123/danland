@@ -154,7 +154,7 @@ width: 10em;
 #menu {
 height: 35px;
 background:url(images/menu-bg.gif) repeat-x;
-width:953px;
+width:952px;
 margin: 0 auto;
 }
 
@@ -166,7 +166,7 @@ float:left;
 
 #nav li {
 float:left;
-background:url(images/menu-sap.gif) no-repeat right top;
+background:url(images/menu-separator.gif) no-repeat right top;
 height:35px;
 padding:0 3px 0 0;
 }
@@ -183,16 +183,17 @@ text-transform:uppercase;
 }
 
 #nav li a:hover {
-background:transparent url(images/menu-hover.gif) repeat-x;
+background:transparent url(images/menu-hover-bg.gif) repeat-x;
 }
 
 #nav li.active-trail a {
-background:transparent url(images/menu-hover.gif) repeat-x;
+background:transparent url(images/menu-hover-bg.gif) repeat-x;
 }
 
 #superfish {
 height:35px; 
 float:left;
+
 }
 
 #superfish h2 {
@@ -211,11 +212,9 @@ height:35px;
 color:#fff;
 text-decoration:none;
 font-size:12px;
-padding:11px 29px 0 29px;
-display:inline-block;
 font-weight:bold;
-height:25px;
 text-transform:uppercase;
+padding:11px 29px 11px 29px;
 }
 
 #superfish .menu li {
@@ -225,7 +224,7 @@ padding:0 3px 0 0;
 
 #superfish .menu li li {
 background: #004f90;
-left: -1px;  
+left: -1px; 
 }
 
 #superfish .menu li li li {
@@ -242,11 +241,11 @@ z-index:10;
 }
 
 #superfish .menu li:hover {
-background:transparent url(images/menu-hover.gif) repeat-x;
+background:transparent url(images/menu-hover-bg.gif) repeat-x;
 }
 
 #superfish .menu li.active-trail {
-background:transparent url(images/menu-hover.gif) repeat-x;
+background:transparent url(images/menu-hover-bg.gif) repeat-x;
 }
 
 #superfish .menu li.active-trail li {
@@ -264,7 +263,7 @@ background: #004f90;
 
 #rounded-menu-left {
 height: 35px;
-background:transparent url(images/home-hover.gif) no-repeat;
+background:transparent url(images/menu-left-bg.gif) no-repeat;
 float:left;
 width:1px;
 line-height:0;
@@ -275,7 +274,7 @@ font-size:0;
 height: 35px;
 background:url(images/menu-right-bg.gif) no-repeat;
 float:right;
-width:10px;
+width:14px;
 line-height:0;
 font-size:0;
 }
@@ -285,7 +284,7 @@ font-size:0;
 
 #banner{
 width:100%;
-background: transparent url(images/banner-outer-bg.gif) no-repeat center top;
+background: transparent url(images/banner-shadow.gif) no-repeat center bottom;
 height:420px;
 margin:14px 0 0 0;
 }
@@ -341,13 +340,14 @@ text-decoration:none;
 #banner-bottom{
 width:950px;
 float:left;
-background:url(images/banner-bottom-bg.png) no-repeat;
-height:65px;
+background:url(images/mission-bg.png) no-repeat center bottom;
+min-height:65px;
 position:absolute;
 bottom:0;
 left:0;
 text-align:right;
 z-index:3;
+line-height:1.7em;
 }
 
 /* Preface first + Preface middle + Preface last regions
@@ -583,6 +583,10 @@ text-align:center;
 margin-bottom: -10px;
 }
 
+table {
+width:100%;
+}
+
 /* Nodes
 -------------------------------------------------------------- */
 
@@ -634,14 +638,7 @@ padding-left: 1em; /* LTR */
 }
 
 .node .picture, .comment .picture {
-border: 1px solid #cccccc;
 float: right; /* LTR */
-padding: 4px;
-}
-
-.picture {
-border: 1px solid #cccccc;
-padding: 4px;
 }
 
 .preview .node, .preview .comment{
@@ -1230,4 +1227,3 @@ padding-left: 10px;
 font-size: 12px; 
 line-height: 13px; 
 }
-

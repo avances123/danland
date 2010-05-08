@@ -83,6 +83,18 @@ padding-top: 5px;
 padding-bottom: 5px;
 }
 
+#banner-bottom{
+width:950px;
+float:left;
+background:url(images/mission-bg.png) no-repeat center bottom;
+height:65px;
+position:absolute;
+bottom:0;
+left:0;
+text-align:right;
+z-index:3;
+line-height:1.7em;
+}
 
 /* Content region
 -------------------------------------------------------------- */
