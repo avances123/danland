@@ -202,7 +202,6 @@ background:transparent url(images/menu-hover-bg.gif) repeat-x;
 #superfish {
 height:35px; 
 float:left;
-
 }
 
 #superfish h2 {
@@ -643,6 +642,7 @@ margin: .5em 0 .5em;
 .node .taxonomy {
 color: #999;
 font-size: 0.9em;
+padding-left: 1em; /* LTR */
 }
 
 .node .picture, .comment .picture {
