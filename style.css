@@ -40,7 +40,7 @@ color:#cc6600;
 
 .content blockquote {
 background: url(images/bq-tl.png) no-repeat left top;
-padding-left: 20px;
+padding-left: 30px;
 margin-left: 10px;
 font-style:italic;
 }
@@ -54,7 +54,8 @@ background: url(images/bq-tl.png) no-repeat left top;
 clear: both;
 display: block;
 font-style: italic;
-padding: 10px 0 0 45px;
+padding-left: 30px;
+margin-left: 10px;
 }
 
 code, tt, pre {
