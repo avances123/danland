@@ -49,6 +49,14 @@ font-style:italic;
 background: url(images/bq-br.png) no-repeat right bottom;
 }
 
+cite {
+background: url(images/bq-tl.png) no-repeat left top;
+clear: both;
+display: block;
+font-style: italic;
+padding: 10px 0 0 45px;
+}
+
 code, tt, pre {
 background-color:#EDF1F3;
 font-family:"Bitstream Vera Sans Mono",Monaco,"Lucida Console",monospace;
