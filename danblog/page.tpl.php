@@ -183,7 +183,7 @@ jQuery(document).ready(function($) {
 </div>
 </div>
 <div id="balance"></div>
-<div id="notice"><p>Theme provided by <a href="http://www.danetsoft.com">Danetsoft</a> based on original design of <a href="http://webstep.no">Webstep</a> by <a href="http://www.maksimer.no">Maksimer AS</a></p></div>
+<div id="notice"><p>Theme by <a href="http://www.danetsoft.com">Danetsoft</a> based on original design of <a href="http://webstep.no">Webstep</a> by <a href="http://www.maksimer.no">Maksimer AS</a></p></div>
 <?php print $closure; ?>
 </body>
 </html>
