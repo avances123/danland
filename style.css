@@ -39,18 +39,18 @@ color:#cc6600;
 }
 
 .content blockquote {
-background: url(images/bq-tl.png) no-repeat left top;
+background: url(images/bq-tl.gif) no-repeat left top;
 padding-left: 30px;
 margin-left: 10px;
 font-style:italic;
 }
 
 .content blockquote p {
-background: url(images/bq-br.png) no-repeat right bottom;
+background: url(images/bq-br.gif) no-repeat right bottom;
 }
 
 cite {
-background: url(images/bq-tl.png) no-repeat left top;
+background: url(images/bq-tl.gif) no-repeat left top;
 clear: both;
 display: block;
 font-style: italic;
@@ -1002,44 +1002,52 @@ background-image: none;
 
 div.links ul.links a {
 background-repeat: no-repeat;
-padding-left: 18px;
+padding-left: 20px;
 padding-bottom: 5px;
 }
 
 div.links ul.links li.comment_add a {
-background-image: url(images/mini-comment.png);
+background-image: url(images/commentadd.gif);
 }
 
 div.links ul.links li.comment_comments a {
-background-image: url(images/mini-comment.png);
+background-image: url(images/comments.gif);
 }
 
 div.links ul.links li.comment_edit a {
-background-image: url(images/mini-edit.png);
+background-image: url(images/commentedit.gif);
 }
 
 div.links ul.links li.comment_delete a {
-background-image: url(images/mini-trash.png);
+background-image: url(images/commentdelete.gif);
 }
 
 div.links ul.links li.comment_reply a {
-background-image: url(images/mini-comment.png);
+background-image: url(images/commentadd.gif);
 }
 
 div.links ul.links li.node_read_more a {
-background-image: url(images/arrow-single-right-green.png);
+background-image: url(images/readmore.gif);
 }
 
 div.links ul.links li.blog_usernames_blog a {
-background-image: url(images/user-plain-green.png);
+background-image: url(images/user.gif);
 }
 
 div.links ul.links li.comment_forbidden a {
-padding-left: 0px;
+background-image:url(images/lock.gif);
 }
 
 div.links ul.links li.upload_attachments a {
-background-image: url(images/photo.png);
+background-image: url(images/photo.gif);
+}
+
+div.links ul.links li.book_printer a{
+background-image:url(images/print.gif);
+}
+
+div.links ul.links li.book_add_child a{
+background-image:url(images/add.gif);
 }
 
 
