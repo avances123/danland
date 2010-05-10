@@ -204,6 +204,7 @@ jQuery(document).ready(function($) {
 <li><?php if (isset($secondary_links)) : ?><?php print theme('links', $secondary_links, array('class' => 'links', 'id' => 'subnav')); ?><?php endif; ?></li></ul>
 </div>
 </div>
-<div id="notice"><p>Theme provided by <a href="http://www.danetsoft.com">Danetsoft</a> under GPL license from <a href="http://www.xpsdev.com">Danang Probo Sayekti</a></p></div><?php print $closure; ?>
+<div id="notice"><p>Theme provided by <a href="http://www.danetsoft.com">Danetsoft</a> based on original design of <a href="http://webstep.no">Webstep</a> by <a href="http://www.maksimer.no">Maksimer AS</a></p></div>
+<?php print $closure; ?>
 </body>
 </html>
