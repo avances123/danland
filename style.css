@@ -798,6 +798,16 @@ background-color: #f4f4f4;
 background-color: #e6e6e6;
 }
 
+#forum ul.links a {
+background-repeat: no-repeat;
+padding-left: 20px;
+padding-bottom: 5px;
+}
+
+#forum ul.links li.forum a {
+background-image:url(images/post.gif);
+}
+
 #forum td.statistics, #forum td.settings, #forum td.pager {
 height: 1em;
 border: 1px solid #bbb;
