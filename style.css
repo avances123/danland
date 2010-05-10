@@ -38,14 +38,14 @@ a:hover {
 color:#cc6600;
 }
 
-.content blockquote {
+blockquote {
 background: url(images/bq-tl.gif) no-repeat left top;
 padding-left: 30px;
 margin-left: 10px;
 font-style:italic;
 }
 
-.content blockquote p {
+blockquote p {
 background: url(images/bq-br.gif) no-repeat right bottom;
 }
 
