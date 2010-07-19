@@ -8,7 +8,7 @@ font-family: Verdana, Arial, Helvetica, sans-serif;
 color: #000;
 margin: 0;
 padding: 0;
-line-height: 1.4em;
+line-height: 1.5em;
 }
 
 h1,h2,h3,h4,h5,h6 {
@@ -19,8 +19,8 @@ font-family: Arial, Helvetica, sans-serif;
 font-family: Arial, Helvetica, sans-serif;
 }
 
-#superfish .menu a, 
-#superfish .menu a:visited  { 
+#superfish .menu a,
+#superfish .menu a:visited  {
 font-family: Arial, Helvetica, sans-serif;
 }
 
@@ -91,4 +91,8 @@ padding: 20px;
 font-size:1.6em;
 color:#002054;
 line-height: 1.2em;
+}
+
+.item-list .pager li a:hover {
+text-decoration:none;
 }

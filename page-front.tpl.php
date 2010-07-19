@@ -16,7 +16,7 @@ jQuery(document).ready(function($) {
 		fx: 'fade' , timeout: 8000, delay: 2000});
 });</script>
 <!--[if IE 6]>
-        <script type="text/javascript" src="<?php print $base_path . $directory; ?>/jquery.pngFix.js"></script>
+        <script type="text/javascript" src="<?php print $base_path . $directory; ?>/scripts/jquery.pngFix.js"></script>
 <![endif]-->
 <!--[if IE 6]>
 <script type="text/javascript">
@@ -24,7 +24,7 @@ jQuery(document).ready(function($) {
         $(document).pngFix();
     });
 </script>
-<![endif]--> 
+<![endif]-->
 <script type="text/javascript">
   jQuery(document).ready(function($) {
     $("#superfish ul.menu").superfish({ 
@@ -32,10 +32,10 @@ jQuery(document).ready(function($) {
             animation:   {opacity:'show',height:'show'},  
             speed:       'fast',                          
             autoArrows:  true,                           
-            dropShadows: false                   
+            dropShadows: true                   
         });
   });
-</script>
+</script> 
  </head>
 
 <body<?php print phptemplate_body_class($left, $right); ?>>
@@ -44,7 +44,7 @@ jQuery(document).ready(function($) {
         <div id="header-first">
           <?php if ($logo): ?> 
           <div class="logo">
-            <a href="<?php print $base_path ?>" title="<?php print t('Home') ?>"><img src="<?php print $logo ?>" alt="<?php print t('Home') ?>" height="50"/></a>
+            <a href="<?php print $base_path ?>" title="<?php print t('Home') ?>"><img src="<?php print $logo ?>" alt="<?php print t('Home') ?>" /></a>
           </div>
           <?php endif; ?>
         </div><!-- /header-first -->
@@ -64,7 +64,7 @@ jQuery(document).ready(function($) {
       </div><!-- /header-wrapper -->
 
 </div> <!-- /header -->
-
+<div style="clear:both"></div>
 <div id="menu">
 <div id="rounded-menu-left"></div>
  <?php if ($primary_links || $superfish_menu): ?>
@@ -82,32 +82,30 @@ jQuery(document).ready(function($) {
     <?php endif; ?>
 <div id="rounded-menu-right"></div>
 </div> <!-- end menu -->
+<div style="clear:both"></div>
 
-
-<div id="banner">
-<div class="banner-inner">
-<div id="banner-preface">
+<div id="slideshow-wrapper">
+<div class="slideshow-inner">
+<div id="slideshow-preface">
  <?php if ($preface): ?>
           <div id="preface">
             <?php print $preface; ?>
           </div><!-- /preface -->
  <?php endif; ?>
 </div>
-<?php if ($mission) : ?><div id="banner-bottom">
+<?php if ($mission) : ?><div id="slideshow-bottom">
 <div id="mission"><?php print $mission; ?></div></div><?php endif; ?>
 <div class="slideshow">
-<img src="<?php print $base_path . $directory; ?>/images/banners/sea.jpg" width="950" height="355" alt="Banner 1"/>
-<img src="<?php print $base_path . $directory; ?>/images/banners/noon.jpg" width="950" height="355" alt="Banner 2"/>
-<img src="<?php print $base_path . $directory; ?>/images/banners/snow.jpg" width="950" height="355" alt="Banner 3"/>
+<img src="<?php print $base_path . $directory; ?>/images/slideshows/sea.jpg" width="950" height="355" alt="slideshow 1"/>
+<img src="<?php print $base_path . $directory; ?>/images/slideshows/noon.jpg" width="950" height="355" alt="slideshow 2"/>
+<img src="<?php print $base_path . $directory; ?>/images/slideshows/snow.jpg" width="950" height="355" alt="slideshow 3"/>
 </div>
 </div>
 </div>
 
  <?php if($preface_first || $preface_middle || $preface_last) : ?>
     <div style="clear:both"></div>
-    <div id="preface-wrapper-front" class="in<?php print (bool) $preface_first + (bool) $preface_middle + (bool) $preface_last; ?>">
-      <div class="border">
-        <div class="center">
+    <div id="preface-wrapper" class="in<?php print (bool) $preface_first + (bool) $preface_middle + (bool) $preface_last; ?>">
           <?php if($preface_first) : ?>
           <div class="column A">
             <?php print $preface_first; ?>
@@ -123,22 +121,18 @@ jQuery(document).ready(function($) {
             <?php print $preface_last; ?>
           </div>
           <?php endif; ?>
-        </div><!-- Center -->
       <div style="clear:both"></div>
-      </div><!-- Border -->
     </div>
     <?php endif; ?>
 
-
-<div id="wrapper-front">
-<div id="container">
-
+<div style="clear:both"></div>
+<div id="wrapper">
 <?php if ($left): ?>
-			<div id="sidebar-left" class="sidebar-front">
+			<div id="sidebar-left" class="sidebar">
 				<?php print $left ?>
 			</div>
 		<?php endif; ?>
-<div id="content-front">
+<div id="content">
 			<?php if ($content_top) : ?><div class="content-top"><?php print $content_top; ?></div>
 			<?php endif; ?>
 			<?php if (!$is_front) print $breadcrumb; ?>
@@ -154,20 +148,16 @@ jQuery(document).ready(function($) {
 </div> <!-- end content -->
 
 <?php if ($right): ?>
-			<div id="sidebar-right" class="sidebar-front">
+			<div id="sidebar-right" class="sidebar">
 				<?php print $right; ?>
 			</div>
 		<?php endif; ?>
-</div>
+<div style="clear:both"></div>
 </div> <!-- end wrapper -->
-
- <div style="clear:both"></div>
 
  <?php if($bottom_1 || $bottom_2 || $bottom_3 || $bottom_4) : ?>
     <div style="clear:both"></div><!-- Do not touch -->
-    <div id="bottom-wrapper-front" class="in<?php print (bool) $bottom_1 + (bool) $bottom_2 + (bool) $bottom_3 + (bool) $bottom_4; ?>">
-      <div class="center">
-        <div class="space">
+    <div id="bottom-wrapper" class="in<?php print (bool) $bottom_1 + (bool) $bottom_2 + (bool) $bottom_3 + (bool) $bottom_4; ?>">
           <?php if($bottom_1) : ?>
           <div class="column A">
             <?php print $bottom_1; ?>
@@ -188,14 +178,12 @@ jQuery(document).ready(function($) {
             <?php print $bottom_4; ?>
           </div>
           <?php endif; ?>
-        </div><!-- Space -->
-      </div><!-- Center -->
       <div style="clear:both"></div>
     </div><!-- Bottom -->
     <?php endif; ?>
 
-
-<div id="footer-wrapper-front">
+<div style="clear:both"></div>
+<div id="footer-wrapper">
 <div id="footer">
  <?php print $footer; ?>
 </div>
@@ -204,6 +192,7 @@ jQuery(document).ready(function($) {
 <li><?php if (isset($secondary_links)) : ?><?php print theme('links', $secondary_links, array('class' => 'links', 'id' => 'subnav')); ?><?php endif; ?></li></ul>
 </div>
 </div>
-<div id="notice"><p>Theme provided by <a href="http://www.danetsoft.com">Danetsoft</a> under GPL license from <a href="http://www.xpsdev.com">Danang Probo Sayekti</a></p></div><?php print $closure; ?>
+<div style="clear:both"></div>
+<div id="notice"><p>Theme by <a href="http://www.danetsoft.com">Danetsoft</a> and <a href="http://www.danpros.com">Danang Probo Sayekti</a> inspired by <a href="http://www.maksimer.no">Maksimer AS</a></p></div><?php print $closure; ?>
 </body>
 </html>

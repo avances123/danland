@@ -10,13 +10,8 @@
   <?php print $styles; ?>
    <!--[if IE 6]><link rel="stylesheet" href="<?php echo $base_path . $directory; ?>/style.ie6.css" type="text/css" /><![endif]-->
   <?php print $scripts; ?>
-  <script type="text/javascript">
-jQuery(document).ready(function($) {
-    $('.slideshow').cycle({
-		fx: 'fade' , timeout: 8000, delay: 2000});
-});</script>
 <!--[if IE 6]>
-        <script type="text/javascript" src="<?php print $base_path . $directory; ?>/jquery.pngFix.js"></script>
+        <script type="text/javascript" src="<?php print $base_path . $directory; ?>/scripts/jquery.pngFix.js"></script>
 <![endif]-->
 <!--[if IE 6]>
 <script type="text/javascript">
@@ -32,7 +27,7 @@ jQuery(document).ready(function($) {
             animation:   {opacity:'show',height:'show'},  
             speed:       'fast',                          
             autoArrows:  true,                           
-            dropShadows: false                   
+            dropShadows: true                   
         });
   });
 </script>
@@ -44,7 +39,7 @@ jQuery(document).ready(function($) {
         <div id="header-first">
           <?php if ($logo): ?> 
           <div class="logo">
-            <a href="<?php print $base_path ?>" title="<?php print t('Home') ?>"><img src="<?php print $logo ?>" alt="<?php print t('Home') ?>" height="50"/></a>
+            <a href="<?php print $base_path ?>" title="<?php print t('Home') ?>"><img src="<?php print $logo ?>" alt="<?php print t('Home') ?>"/></a>
           </div>
           <?php endif; ?>
         </div><!-- /header-first -->
@@ -83,11 +78,9 @@ jQuery(document).ready(function($) {
 <div id="rounded-menu-right"></div>
 </div> <!-- end menu -->
 
-<?php if($preface_first || $preface_middle || $preface_last) : ?>
+ <?php if($preface_first || $preface_middle || $preface_last) : ?>
     <div style="clear:both"></div>
     <div id="preface-wrapper" class="in<?php print (bool) $preface_first + (bool) $preface_middle + (bool) $preface_last; ?>">
-      <div class="border">
-        <div class="center">
           <?php if($preface_first) : ?>
           <div class="column A">
             <?php print $preface_first; ?>
@@ -103,20 +96,17 @@ jQuery(document).ready(function($) {
             <?php print $preface_last; ?>
           </div>
           <?php endif; ?>
-        </div><!-- Center -->
       <div style="clear:both"></div>
-      </div><!-- Border -->
     </div>
     <?php endif; ?>
 
+<div style="clear:both"></div>
 <div id="wrapper">
-<div id="container">
 <?php if ($left): ?>
-			<div id="sidebar-left" class="sidebar-node">
+			<div id="sidebar-left" class="sidebar">
 				<?php print $left ?>
 			</div>
 		<?php endif; ?>
-
 <div id="content">
 			<?php if ($content_top) : ?><div class="content-top"><?php print $content_top; ?></div>
 			<?php endif; ?>
@@ -125,28 +115,24 @@ jQuery(document).ready(function($) {
 			<?php if ($tabs) : ?><div class="tabs"><?php print $tabs; ?></div><?php endif; ?>
 			<?php if ($title) : ?><h1 class="title"><?php print $title; ?></h1><?php endif; ?>
 			<?php print $help; ?>
-		      	      <?php if ($content) : ?><div class="content-middle"><?php print $content; ?></div>
+		      <?php if ($content) : ?><div class="content-middle"><?php print $content; ?></div>
 			<?php endif; ?>
 			<?php if ($content_bottom) : ?><div class="content-bottom"><?php print $content_bottom; ?></div>
-<?php endif; ?>
+			<?php endif; ?>
 
 </div> <!-- end content -->
 
 <?php if ($right): ?>
-			<div id="sidebar-right" class="sidebar-node">
+			<div id="sidebar-right" class="sidebar">
 				<?php print $right; ?>
 			</div>
 		<?php endif; ?>
-</div>
-</div> <!-- end wrapper -->
-
 <div style="clear:both"></div>
+</div> <!-- end wrapper -->
 
  <?php if($bottom_1 || $bottom_2 || $bottom_3 || $bottom_4) : ?>
     <div style="clear:both"></div><!-- Do not touch -->
     <div id="bottom-wrapper" class="in<?php print (bool) $bottom_1 + (bool) $bottom_2 + (bool) $bottom_3 + (bool) $bottom_4; ?>">
-      <div class="center">
-        <div class="space">
           <?php if($bottom_1) : ?>
           <div class="column A">
             <?php print $bottom_1; ?>
@@ -167,12 +153,11 @@ jQuery(document).ready(function($) {
             <?php print $bottom_4; ?>
           </div>
           <?php endif; ?>
-        </div><!-- Space -->
-      </div><!-- Center -->
       <div style="clear:both"></div>
     </div><!-- Bottom -->
     <?php endif; ?>
 
+<div style="clear:both"></div>
 <div id="footer-wrapper">
 <div id="footer">
  <?php print $footer; ?>
@@ -182,7 +167,7 @@ jQuery(document).ready(function($) {
 <li><?php if (isset($secondary_links)) : ?><?php print theme('links', $secondary_links, array('class' => 'links', 'id' => 'subnav')); ?><?php endif; ?></li></ul>
 </div>
 </div>
-<div id="balance"></div>
-<div id="notice"><p>Theme provided by <a href="http://www.danetsoft.com">Danetsoft</a> under GPL license from <a href="http://www.xpsdev.com">Danang Probo Sayekti</a></p></div><?php print $closure; ?>
+<div style="clear:both"></div>
+<div id="notice"><p>Theme by <a href="http://www.danetsoft.com">Danetsoft</a> and <a href="http://www.danpros.com">Danang Probo Sayekti</a> inspired by <a href="http://www.maksimer.no">Maksimer AS</a></p></div><?php print $closure; ?>
 </body>
 </html>
