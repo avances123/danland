@@ -31,9 +31,3 @@ features[] = primary_links
 features[] = secondary_links
 core = "6.x"
 
-; Information added by drupal.org packaging script on 2010-05-17
-version = "6.x-1.10"
-core = "6.x"
-project = "danland"
-datestamp = "1274109606"
-
