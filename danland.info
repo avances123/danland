@@ -35,9 +35,3 @@ core = "6.x"
 scripts[] = scripts/hoverIntent.js
 scripts[] = scripts/superfish.js
 
-; Information added by drupal.org packaging script on 2010-05-17
-version = "6.x-1.10"
-core = "6.x"
-project = "danland"
-datestamp = "1274109606"
-
