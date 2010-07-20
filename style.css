@@ -1110,7 +1110,6 @@ padding-left:4px;
 padding-right:4px;
 padding-top:1px;
 padding-bottom:1px;
-border: 1px solid #005a8c;
 }
 
 .item-list .pager li {
@@ -1123,13 +1122,11 @@ padding-right:4px;
 padding-top:1px;
 padding-bottom:1px;
 background-color: #f4f4f4;;
-border: 1px solid #ddd;
 }
 
 .item-list .pager li a:hover {
 background-color:#005a8c;
 color:#FFFFFF;
-border: 1px solid #005a8c;
 }
 
 /* Login + Register + RSS
