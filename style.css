@@ -1120,9 +1120,9 @@ padding:0px;
 .item-list .pager li a{
 padding-left:4px;
 padding-right:4px;
-background-color:#e6e6e6;
 padding-top:1px;
 padding-bottom:1px;
+background-color: #f4f4f4;;
 border: 1px solid #ddd;
 }
 
