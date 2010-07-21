@@ -131,6 +131,30 @@
 <div style="clear:both"></div>
 </div> <!-- end wrapper -->
 
+
+<?php if($bottom_first || $bottom_middle || $bottom_last) : ?>
+    <div style="clear:both"></div>
+    <div id="bottom-teaser" class="in<?php print (bool) $bottom_first + (bool) $bottom_middle + (bool) $bottom_last; ?>">
+          <?php if($bottom_first) : ?>
+          <div class="column A">
+            <?php print $bottom_first; ?>
+          </div>
+          <?php endif; ?>
+          <?php if($bottom_middle) : ?>
+          <div class="column B">
+            <?php print $bottom_middle; ?>
+          </div>
+          <?php endif; ?>
+          <?php if($bottom_last) : ?>
+          <div class="column C">
+            <?php print $bottom_last; ?>
+          </div>
+          <?php endif; ?>
+      <div style="clear:both"></div>
+    </div>
+    <?php endif; ?>
+
+
  <?php if($bottom_1 || $bottom_2 || $bottom_3 || $bottom_4) : ?>
     <div style="clear:both"></div><!-- Do not touch -->
     <div id="bottom-wrapper" class="in<?php print (bool) $bottom_1 + (bool) $bottom_2 + (bool) $bottom_3 + (bool) $bottom_4; ?>">
@@ -163,12 +187,17 @@
 <div id="footer">
  <?php print $footer; ?>
 </div>
+<?php if($footer_message || $secondary_links) : ?>
 <div id="subnav-wrapper">
  <ul><li><?php print $footer_message; ?></li>
 <li><?php if (isset($secondary_links)) : ?><?php print theme('links', $secondary_links, array('class' => 'links', 'id' => 'subnav')); ?><?php endif; ?></li></ul>
 </div>
-</div>
+<?php endif; ?>
+</div> <!-- end footer wrapper -->
+
 <div style="clear:both"></div>
-<div id="notice"><p>Theme by <a href="http://www.danetsoft.com">Danetsoft</a> and <a href="http://www.danpros.com">Danang Probo Sayekti</a> inspired by <a href="http://www.maksimer.no">Maksimer</a></p></div><?php print $closure; ?>
+<div id="notice"><p>Theme by <a href="http://www.danetsoft.com">Danetsoft</a> and <a href="http://www.danpros.com">Danang Probo Sayekti</a> inspired by <a href="http://www.maksimer.no">Maksimer</a></p></div>
+<?php print $closure; ?>
 </body>
 </html>
+
