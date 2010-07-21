@@ -1254,8 +1254,8 @@ width: 950px;
 margin: 0 auto;
 font-size: 12px;
 border-top: 1px solid #bbb;
-padding-top:10px;
-padding-bottom:10px;
+padding-top:5px;
+padding-bottom:5px;
 }
 
 /* Secondary menu
@@ -1278,7 +1278,7 @@ color: #cc6600;
 
 #subnav-wrapper {
 text-align:right;
-padding-bottom:10px;
+padding-bottom:5px;
 }
 
 #subnav-wrapper ul { 
