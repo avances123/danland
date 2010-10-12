@@ -103,6 +103,16 @@ overflow:hidden;
 margin-top: 20px;
 }
 
+/* Forum
+-------------------------------------------------------------- */
+
+#forum tr td.forum {
+background-image:url(images/forum-default.gif);
+background-position:2px 2px;
+background-repeat:no-repeat;
+padding-left:25px;
+}
+
 /* Bottom region
 -------------------------------------------------------------- */
 
