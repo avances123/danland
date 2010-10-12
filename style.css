@@ -854,6 +854,10 @@ padding-bottom: 5px;
 background-image:url(images/post.gif);
 }
 
+#forum ul.links li.login a {
+background-image:url(images/lock.gif);
+}
+
 #forum td.statistics, #forum td.settings, #forum td.pager {
 height: 1em;
 border: 1px solid #bbb;
@@ -980,7 +984,8 @@ background: transparent url(images/menu-leaf.gif) no-repeat 1px .35em;
 
 ol li {
 padding: 0 0 .3em;
-margin-left: 2em; 
+margin-left: 2em;
+background-image: none; 
 }
 
 ul li.expanded {
@@ -995,7 +1000,7 @@ ul li.leaf a, ul li.expanded a, ul li.collapsed a {
 display: block;
 }
 
-ul.inline li {
+ul.inline li, ul.links li {
 background: none;
 margin: 0;
 padding: 0 1em 0 0; 
@@ -1020,7 +1025,7 @@ background: transparent url(../../misc/watchdog-ok.png) no-repeat 0px 50%;
 }
 
 ol.task-list li.active {
-margin-right: 1em;
+margin-right: 1em; /* LTR */
 }
 
 fieldset ul.clear-block li {
@@ -1034,7 +1039,7 @@ text-align: center;
 }
 
 #user-login-form ul {
-text-align: left;
+text-align: left; /* LTR */
 }
 
 ul.links li, ul.inline li {
@@ -1052,7 +1057,25 @@ padding: 0;
 background-image: none;
 }
 
+li.expanded {
+list-style-image:none;
+list-style-type:none;
+margin:0.15em 0 0.15em 0.5em;
+padding:0 0 0.2em 1.5em;
+}
+
 div.links ul.links a {
+background-repeat: no-repeat;
+padding-left: 20px;
+padding-bottom: 5px;
+}
+
+div.links ul.links li.comment_forbidden a {
+padding:0;
+margin:0;
+}
+
+div.links ul.links li.comment_forbidden {
 background-repeat: no-repeat;
 padding-left: 20px;
 padding-bottom: 5px;
@@ -1086,7 +1109,7 @@ div.links ul.links li.blog_usernames_blog a {
 background-image: url(images/user.gif);
 }
 
-div.links ul.links li.comment_forbidden a {
+div.links ul.links li.comment_forbidden {
 background-image:url(images/lock.gif);
 }
 
@@ -1296,3 +1319,4 @@ padding-left: 5px;
 font-size: 12px; 
 line-height: 13px; 
 }
+
