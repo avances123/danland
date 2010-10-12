@@ -398,10 +398,6 @@ background-position: -10px 0;
 #superfish .sf-shadow ul {
 background:	url(images/shadow.png) no-repeat bottom right;
 padding: 0 8px 9px 0;
--moz-border-radius-bottomleft: 17px;
--moz-border-radius-topright: 17px;
--webkit-border-top-right-radius: 17px;
--webkit-border-bottom-left-radius: 17px;
 }
 
 #superfish .sf-shadow ul.sf-shadow-off {
