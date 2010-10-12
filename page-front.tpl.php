@@ -13,7 +13,7 @@
   <script type="text/javascript">
 jQuery(document).ready(function($) {
     $('.slideshow').cycle({
-		fx: 'fade' , timeout: 8000, delay: 2000, randomizeEffects: false, requeueOnImageNotLoaded: true, requeueTimeout:  2000});
+		fx: 'fade' , timeout: 8000, delay: 2000});
 });</script>
 <!--[if IE 6]>
         <script type="text/javascript" src="<?php print $base_path . $directory; ?>/scripts/jquery.pngFix.js"></script>
@@ -224,4 +224,5 @@ jQuery(document).ready(function($) {
 <?php print $closure; ?>
 </body>
 </html>
+
 
