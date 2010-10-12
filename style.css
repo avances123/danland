@@ -425,6 +425,7 @@ margin:0 auto;
 height:355px;
 position:relative;
 z-index:1;
+overflow: hidden;
 }
 
 #slideshow-preface {
@@ -439,10 +440,10 @@ width:950px;
 height:355px;
 position:relative;
 z-index:2;
+overflow: hidden;
 }
 
 .slideshow IMG {
-position:absolute;
 top:0;
 left:0;
 z-index:8;
