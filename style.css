@@ -982,7 +982,8 @@ background: transparent url(images/menu-leaf.gif) no-repeat 1px .35em;
 ol li {
 padding: 0 0 .3em;
 margin-left: 2em;
-background-image: none; 
+background-image: none;
+list-style-type: decimal; 
 }
 
 ul li.expanded {
