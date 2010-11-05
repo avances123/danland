@@ -1067,7 +1067,6 @@ padding:0 0 0.2em 1.5em;
 div.links ul.links a {
 background-repeat: no-repeat;
 padding-left: 20px;
-padding-bottom: 5px;
 }
 
 div.links ul.links li.comment_forbidden a {
@@ -1076,9 +1075,14 @@ margin:0;
 }
 
 div.links ul.links li.comment_forbidden {
+padding:0;
+margin:0;
+}
+
+div.links ul.links li.comment_forbidden span {
 background-repeat: no-repeat;
 padding-left: 20px;
-padding-bottom: 5px;
+padding-right:20px;
 }
 
 div.links ul.links li.comment_add a {
@@ -1109,7 +1113,7 @@ div.links ul.links li.blog_usernames_blog a {
 background-image: url(images/user.gif);
 }
 
-div.links ul.links li.comment_forbidden {
+div.links ul.links li.comment_forbidden span {
 background-image:url(images/lock.gif);
 }
 
