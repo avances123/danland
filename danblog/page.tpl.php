@@ -1,99 +1,82 @@
 <?php
 // $Id$
-?><!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN"
-  "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
-<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="<?php print $language->language ?>" lang="<?php print $language->language ?>" dir="<?php print $language->dir ?>">
-  <head>
-  <?php print $head; ?>
-  <title><?php print $head_title; ?></title>
-    <meta http-equiv="Content-Style-Type" content="text/css" />
-  <?php print $styles; ?>
-   <!--[if IE 6]><link rel="stylesheet" href="<?php echo $base_path . $directory; ?>/style.ie6.css" type="text/css" /><![endif]-->
-  <?php print $scripts; ?>
-<!--[if IE 6]>
-        <script type="text/javascript" src="<?php print $base_path . $directory; ?>/scripts/jquery.pngFix.js"></script>
-<![endif]-->
-<!--[if IE 6]>
-<script type="text/javascript">
-    jQuery(document).ready(function($) {
-        $(document).pngFix();
-    });
-</script>
-<![endif]-->
-<script type="text/javascript">
-  jQuery(document).ready(function($) {
-    $("#superfish ul.menu").superfish({ 
-            delay:       100,                           
-            animation:   {opacity:'show',height:'show'},  
-            speed:       'fast',                          
-            autoArrows:  true,                           
-            dropShadows: true                   
-        });
-  });
-</script>
- </head>
-
-<body<?php print phptemplate_body_class($left, $right); ?>>
+?>
+<div <?php print danland_body_class($page['sidebar_first'], $page['sidebar_second']); ?>>
+<?php if ($page['superfish_menu']): ?>
+<?php endif; ?>
 <div id="header">
 <div id="header-wrapper">
         <div id="header-first">
           <?php if ($logo): ?> 
           <div class="logo">
-            <a href="<?php print $base_path ?>" title="<?php print t('Home') ?>"><img src="<?php print $logo ?>" alt="<?php print t('Home') ?>" height="50"/></a>
+            <a href="<?php print $base_path ?>" title="<?php print t('Home') ?>"><img src="<?php print $logo ?>" alt="<?php print t('Home') ?>" /></a>
           </div>
           <?php endif; ?>
-        </div><!-- /header-first -->
-        <div id="header-middle">
-	  <?php if ($site_name) : ?><h2 class="logo-name"><a href="<?php print $front_page; ?>" title="<?php print t('Home'); ?>"><?php print $site_name; ?></a></h2><?php endif; ?>
-				<?php if ($site_slogan) : ?><div class='logo-text'><?php print $site_slogan; ?></div><?php endif; ?>
-        </div><!-- /header-middle -->
+        </div><!-- end header-first -->
+       <div id="header-middle">
+	  <?php if ($site_name) : ?>
+		<?php if ($is_front) : ?>
+			<h1 class="site-name"><a href="<?php print $base_path ?>" title="<?php print $site_name ?>"><?php print $site_name ?></a></h1>
+		<?php endif; ?>
+		<?php if (!$is_front) : ?>
+			<h2 class="site-name"><a href="<?php print $base_path ?>" title="<?php print $site_name ?>"><?php print $site_name ?></a></h2>
+			<?php endif; ?>
+	<?php endif; ?>
+	<?php if ($site_slogan) : ?><div class='site-slogan'><?php print $site_slogan; ?></div><?php endif; ?>
+        </div><!-- end header-middle -->
+	<?php if ($page['search_box']): ?>
         <div id="search-box">
-          <?php print $search_box; ?>
+          <?php print render ($page['search_box']); ?>
         </div><!-- /search-box -->
+	<?php endif; ?>
 
 	<div id="authorize">
-      <ul><?php global $user; if ($user->uid != 0) { print '<li class="first">' .t('Logged in as '). '<a href="' .url('user/'.$user->uid). '">' .$user->name. '</a></li>'; print '<li><a href="' .url('logout'). '">' .t('Logout'). '</a></li>'; } else { print '<li class="first"><a href="' .url('user'). '">' .t('Login'). '</a></li>'; print '<li><a href="' .url('user/register'). '">' .t('Register'). '</a></li>'; } ?></ul>
+	<?php if (!$logged_in): ?>
+      <ul><?php global $user; if ($user->uid != 0) { print '<li class="first">' .t('Logged in as '). '<a href="' .url('user/'.$user->uid). '">' .$user->name. '</a></li>'; print '<li><a href="' .url('user/logout'). '">' .t('Logout'). '</a></li>'; } else { print '<li class="first"><a href="' .url('user'). '">' .t('Login'). '</a></li>'; print '<li><a href="' .url('user/register'). '">' .t('Register'). '</a></li>'; } ?></ul>
+	<?php endif; ?>
 	  <?php print $feed_icons; ?>
   </div>
 
-      </div><!-- /header-wrapper -->
+      </div><!-- end header-wrapper -->
 
 </div> <!-- /header -->
-
+<div style="clear:both"></div>
 <div id="menu">
 <div id="rounded-menu-left"></div>
- <?php if ($primary_links || $superfish_menu): ?>
-      <!-- PRIMARY -->
-      <div id="<?php print $primary_links ? 'nav' : 'superfish' ; ?>">
+ <?php if ($main_menu || $page['superfish_menu']): ?>
+      <div id="<?php print $main_menu ? 'nav' : 'superfish' ; ?>">
         <?php 
-					     if ($primary_links) {
-		          print theme('links', $primary_links); 
+					     if ($main_menu) {
+		          print theme('links__system_main_menu', array('links' => $main_menu));  
 				      }
-				      elseif (!empty($superfish_menu)) {
-				        print $superfish_menu;
+				      elseif (!empty($page['superfish_menu'])) {
+				        print render ($page['superfish_menu']);
 				      }
         ?>
-      </div> <!-- /primary -->
+      </div> <!-- end primary -->
     <?php endif; ?>
 <div id="rounded-menu-right"></div>
 </div> <!-- end menu -->
+<div style="clear:both"></div>
 
- <?php if($preface_first || $preface_middle || $preface_last) : ?>
+<?php if ($page['highlighted']): ?><div id="mission-wrapper"><div id="mission"><?php print render ($page['highlighted']); ?></div></div><?php endif; ?>
+
+ <?php if($page['preface_first'] || $page['preface_middle'] || $page['preface_last']) : ?>
     <div style="clear:both"></div>
-    <div id="preface-wrapper" class="in<?php print (bool) $preface_first + (bool) $preface_middle + (bool) $preface_last; ?>">
-          <?php if($preface_first) : ?>
+    <div id="preface-wrapper" class="in<?php print (bool) $page['preface_first'] + (bool) $page['preface_middle'] + (bool) $page['preface_last']; ?>">
+          <?php if($page['preface_first']) : ?>
           <div class="column A">
-            <?php print $preface_first; ?>
+            <?php print render ($page['preface_first']); ?>
           </div>
           <?php endif; ?>
-          <?php if($preface_middle) : ?>
+          <?php if($page['preface_middle']) : ?>
           <div class="column B">
-            <?php print $preface_middle; ?>
+            <?php print render ($page['preface_middle']); ?>
           </div>
           <?php endif; ?>
-          <?php if($preface_last) : ?>
+          <?php if($page['preface_last']) : ?>
           <div class="column C">
-            <?php print $preface_last; ?>
+            <?php print render ($page['preface_last']); ?>
           </div>
           <?php endif; ?>
       <div style="clear:both"></div>
@@ -102,98 +85,115 @@
 
 <div style="clear:both"></div>
 <div id="wrapper">
-<?php if ($left): ?>
-			<div id="sidebar-left" class="sidebar">
-				<?php print $left ?>
-			</div>
-		<?php endif; ?>
+
+    <?php if ($page['sidebar_first']): ?>
+      <div id="sidebar-left" class="column sidebar"><div class="section">
+        <?php print render($page['sidebar_first']); ?>
+      </div></div> <!-- end sidebar-first -->
+    <?php endif; ?>
+
 <div id="content">
-			<?php if ($content_top) : ?><div class="content-top"><?php print $content_top; ?></div>
+			<a id="main-content"></a>
+			<?php if ($page['content_top']) : ?><div class="content-top"><?php print render ($page['content_top']); ?></div>
 			<?php endif; ?>
 			<?php if (!$is_front) print $breadcrumb; ?>
 			<?php if ($show_messages) { print $messages; }; ?>
-			<?php if ($tabs) : ?><div class="tabs"><?php print $tabs; ?></div><?php endif; ?>
-			<?php if ($title) : ?><h1 class="title"><?php print $title; ?></h1><?php endif; ?>
-			<?php print $help; ?>
-		      <?php if ($content) : ?><div class="content-middle"><?php print $content; ?></div>
+      		<?php print render($title_prefix); ?>
+      			<?php if ($title): ?>
+        				<h1 class="title" id="page-title">
+         			 		<?php print $title; ?>
+        				</h1>
+     				 <?php endif; ?>
+      		<?php print render($title_suffix); ?>
+      		<?php if ($tabs): ?>
+        			<div class="tabs">
+          				<?php print render($tabs); ?>
+        			</div>
+      		<?php endif; ?>
+      		<?php print render($page['help']); ?>
+      		<?php if ($action_links): ?>
+        			<ul class="action-links">
+          				<?php print render($action_links); ?>
+        			</ul>
+      		<?php endif; ?>
+		      <?php if ($page['content']) : ?><div class="content-middle"><?php print render ($page['content']); ?></div>
 			<?php endif; ?>
-			<?php if ($content_bottom) : ?><div class="content-bottom"><?php print $content_bottom; ?></div>
+			<?php if ($page['content_bottom']) : ?><div class="content-bottom"><?php print render ($page['content_bottom']); ?></div>
 			<?php endif; ?>
 
 </div> <!-- end content -->
 
-<?php if ($right): ?>
-			<div id="sidebar-right" class="sidebar">
-				<?php print $right; ?>
-			</div>
-		<?php endif; ?>
+    <?php if ($page['sidebar_second']): ?>
+      <div id="sidebar-right" class="column sidebar"><div class="section">
+        <?php print render($page['sidebar_second']); ?>
+      </div></div> <!-- end sidebar-second -->
+    <?php endif; ?>
 <div style="clear:both"></div>
 </div> <!-- end wrapper -->
 
-<?php if($bottom_first || $bottom_middle || $bottom_last) : ?>
+
+<?php if($page['bottom_first'] || $page['bottom_middle'] || $page['bottom_last']) : ?>
     <div style="clear:both"></div>
-    <div id="bottom-teaser" class="in<?php print (bool) $bottom_first + (bool) $bottom_middle + (bool) $bottom_last; ?>">
-          <?php if($bottom_first) : ?>
+    <div id="bottom-teaser" class="in<?php print (bool) $page['bottom_first'] + (bool) $page['bottom_middle'] + (bool) $page['bottom_last']; ?>">
+          <?php if($page['bottom_first']) : ?>
           <div class="column A">
-            <?php print $bottom_first; ?>
+            <?php print render ($page['bottom_first']); ?>
           </div>
           <?php endif; ?>
-          <?php if($bottom_middle) : ?>
+          <?php if($page['bottom_middle']) : ?>
           <div class="column B">
-            <?php print $bottom_middle; ?>
+            <?php print render ($page['bottom_middle']); ?>
           </div>
           <?php endif; ?>
-          <?php if($bottom_last) : ?>
+          <?php if($page['bottom_last']) : ?>
           <div class="column C">
-            <?php print $bottom_last; ?>
+            <?php print render ($page['bottom_last']); ?>
           </div>
           <?php endif; ?>
       <div style="clear:both"></div>
-    </div>
+    </div> <!-- end bottom first etc. -->
     <?php endif; ?>
 
- <?php if($bottom_1 || $bottom_2 || $bottom_3 || $bottom_4) : ?>
+
+ <?php if($page['bottom_1'] || $page['bottom_2'] || $page['bottom_3'] || $page['bottom_4']) : ?>
     <div style="clear:both"></div><!-- Do not touch -->
-    <div id="bottom-wrapper" class="in<?php print (bool) $bottom_1 + (bool) $bottom_2 + (bool) $bottom_3 + (bool) $bottom_4; ?>">
-          <?php if($bottom_1) : ?>
+    <div id="bottom-wrapper" class="in<?php print (bool) $page['bottom_1'] + (bool) $page['bottom_2'] + (bool) $page['bottom_3'] + (bool) $page['bottom_4']; ?>">
+          <?php if($page['bottom_1']) : ?>
           <div class="column A">
-            <?php print $bottom_1; ?>
+            <?php print render ($page['bottom_1']); ?>
           </div>
           <?php endif; ?>
-          <?php if($bottom_2) : ?>
+          <?php if($page['bottom_2']) : ?>
           <div class="column B">
-            <?php print $bottom_2; ?>
+            <?php print render ($page['bottom_2']); ?>
           </div>
           <?php endif; ?>
-          <?php if($bottom_3) : ?>
+          <?php if($page['bottom_3']) : ?>
           <div class="column C">
-            <?php print $bottom_3; ?>
+            <?php print render ($page['bottom_3']); ?>
           </div>
           <?php endif; ?>
-          <?php if($bottom_4) : ?>
+          <?php if($page['bottom_4']) : ?>
           <div class="column D">
-            <?php print $bottom_4; ?>
+            <?php print render ($page['bottom_4']); ?>
           </div>
           <?php endif; ?>
       <div style="clear:both"></div>
-    </div><!-- Bottom -->
+    </div><!-- end bottom -->
     <?php endif; ?>
 
 <div style="clear:both"></div>
 <div id="footer-wrapper">
 <div id="footer">
- <?php print $footer; ?>
+ <?php print render ($page['footer']); ?>
 </div>
-<?php if($footer_message || $secondary_links) : ?>
+<?php if($secondary_menu) : ?>
 <div id="subnav-wrapper">
- <ul><li><?php print $footer_message; ?></li>
-<li><?php if (isset($secondary_links)) : ?><?php print theme('links', $secondary_links, array('class' => 'links', 'id' => 'subnav')); ?><?php endif; ?></li></ul>
+<?php print theme('links__system_secondary_menu', array('links' => $secondary_menu, 'attributes' => array('id' => 'subnav', 'class' => array('links', 'clearfix')))); ?>
 </div>
 <?php endif; ?>
 </div> <!-- end footer wrapper -->
 
 <div style="clear:both"></div>
 <div id="notice"><p>Theme by <a href="http://www.danetsoft.com">Danetsoft</a> and <a href="http://www.danpros.com">Danang Probo Sayekti</a> inspired by <a href="http://www.maksimer.no">Maksimer</a></p></div>
-<?php print $closure; ?>
-</body>
-</html>
+</div>

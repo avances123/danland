@@ -40,7 +40,7 @@ a:hover {
 text-decoration: underline;
 }
 
-.logo-name a:hover {
+.site-name a:hover {
 text-decoration: none;
 }
 
@@ -69,10 +69,6 @@ text-decoration: underline;
 color: #005a8c;/*#e87e17*/
 }
 
-.node .title {
-padding-bottom: 5px;
-}
-
 .title {
 line-height:1.2em;
 }
@@ -84,13 +80,25 @@ text-decoration: none;
 #aggregator h3 a:hover {
 text-decoration: none;
 color: #005a8c;/*#e87e17*/
+}
+
+#mission-wrapper {
+width:950px;
+margin:0 auto;
 } 
 
-#mission-db {
-padding: 20px;
-font-size:1.6em;
-color:#002054;
-line-height: 1.2em;
+#mission {
+font-size:1.4em;
+display:block;
+line-height:1.2em;
+}
+
+#mission .block-title {
+margin-top:20px;
+}
+
+#mission .region {
+margin:20px 10px;
 }
 
 .item-list .pager li a:hover {
