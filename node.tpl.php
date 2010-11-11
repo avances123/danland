@@ -9,6 +9,7 @@
     <?php if ($submitted): ?><span class="submitted"><?php print $submitted; ?></span><?php endif; ?>
     <?php if ($taxonomy): ?><div class="taxonomy"><?php print $terms; ?></div><?php endif;?>
     <div class="content"><?php print $content; ?></div>
+	<div style="clear:both"></div>
     <?php if ($links): ?>
       <div class="links"><?php print $links; ?></div>
     <?php endif; ?>
