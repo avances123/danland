@@ -10,6 +10,16 @@
  * CHANGELOG: http://users.tpg.com.au/j_birch/plugins/superfish/changelog.txt
  */
 
+ jQuery(document).ready(function($) {
+    $("#superfish ul.menu").superfish({ 
+            delay:       100,                           
+            animation:   {opacity:'show',height:'show'},  
+            speed:       'fast',                          
+            autoArrows:  true,                           
+            dropShadows: true                   
+        });
+  });
+
 ;(function($){
 	$.fn.superfish = function(op){
 

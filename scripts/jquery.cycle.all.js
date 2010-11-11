@@ -9,6 +9,12 @@
  * http://www.gnu.org/licenses/gpl.html
  * Requires: jQuery v1.2.6 or later
  */
+
+jQuery(document).ready(function($) {
+    $('.slideshow').cycle({
+		fx: 'fade' , timeout: 8000, delay: 2000});
+});
+
 ;(function($) {
 
 var ver = '2.86';
