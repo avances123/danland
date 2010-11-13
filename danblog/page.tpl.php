@@ -1,9 +1,7 @@
 <?php
 // $Id$
 ?>
-<div <?php print danland_body_class($page['sidebar_first'], $page['sidebar_second']); ?>>
-<?php if ($page['superfish_menu']): ?>
-<?php endif; ?>
+<div <?php print danland_page_class($page['sidebar_first'], $page['sidebar_second']); ?>>
 <div id="header">
 <div id="header-wrapper">
         <div id="header-first">
@@ -184,9 +182,11 @@
 
 <div style="clear:both"></div>
 <div id="footer-wrapper">
+<?php if ($page['footer']): ?>
 <div id="footer">
  <?php print render ($page['footer']); ?>
 </div>
+<?php endif; ?>
 <?php if($secondary_menu) : ?>
 <div id="subnav-wrapper">
 <?php print theme('links__system_secondary_menu', array('links' => $secondary_menu, 'attributes' => array('id' => 'subnav', 'class' => array('links', 'clearfix')))); ?>

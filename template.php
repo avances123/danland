@@ -1,6 +1,6 @@
 <?php
 // $Id$
-function danland_body_class($sidebar_first, $sidebar_second) {
+function danland_page_class($sidebar_first, $sidebar_second) {
 	if ($sidebar_first && $sidebar_second) {
 		$class = 'sidebars-2';
 		$id = 'sidebar-side-2';	

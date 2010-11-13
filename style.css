@@ -561,7 +561,7 @@ margin:20px;
 
 #wrapper {
 width:950px;
-margin: 15px auto 10px;
+margin: 15px auto 0;
 }
 
 #content {
@@ -680,7 +680,7 @@ border-right: 1px solid #bbb;
 border-left: 1px solid #ddd;
 border-top: 1px solid #ddd;
 background-color: #f4f4f4;
-margin: 0 auto 15px;
+margin:0 0 20px;
 }
 
 .content-top .block-title {
@@ -691,15 +691,19 @@ margin-top:15px;
 margin:15px;
 }
 
-.content-middle {
-margin:20px 0;
+.content-middle .block-system {
+margin:0 0 20px;
 }
 
-.content-middle .block-title {
+.content-middle .block-block {
+margin:0;
+}
+
+.content-middle .block-block .block-title{
 margin-top:15px;
 }
 
-.content-middle .region {
+.content-middle .block-block .content {
 margin:15px 0;
 }
 
@@ -708,7 +712,7 @@ border-bottom: 1px solid #bbb;
 border-right: 1px solid #bbb;
 border-left: 1px solid #ddd;
 border-top: 1px solid #ddd;
-background-color: #f4f4f4;;
+background-color: #f4f4f4;
 }
 
 .content-bottom .block-title {
@@ -767,6 +771,7 @@ border-right: 1px solid #bbb;
 border-bottom: 1px solid #bbb;
 border-left: 1px solid #ddd;
 border-top: 1px solid #ddd;
+margin:0;
 }
 
 .messages {
@@ -1302,7 +1307,7 @@ padding-right: 20px;
 
 #bottom-teaser {
 width:950px;
-margin: 10px auto 10px;
+margin: 15px auto 0;
 }
 
 #bottom-teaser .column {
@@ -1342,7 +1347,7 @@ background-color: #f4f4f4;;
 border-right: 1px solid #bbb;
 border-left: 1px solid #ddd;
 border-top: 1px solid #ddd;
-margin: 10px auto 0;
+margin: 20px auto 0;
 text-align: left;
 width: 950px;
 position: relative;
@@ -1388,22 +1393,21 @@ margin:15px 0;
 width: 950px;
 margin: 0 auto;
 position: relative;
-padding-bottom:5px;
+border-top: 1px solid #bbb;
+padding:10px 0 0;
 }
 
 #footer{
 width: 950px;
 font-size: 12px;
-border-top: 1px solid #bbb;
-padding:10px 0 5px;
 }
 
 #footer .block-title {
-margin-top:10px;
+margin-top:15px;
 }
 
 #footer .region {
-margin:10px 0;
+margin:15px 0;
 }
 
 /* Secondary menu
