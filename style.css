@@ -234,6 +234,16 @@ line-height:0;
 font-size:0;
 }
 
+#nav ul, #nav ul li.leaf {
+list-style-image:none;
+list-style:none;
+}
+
+#nav ul, #nav .block ul, #nav ol {
+margin:0;
+padding:0;
+}
+
 /* Superfish
 -------------------------------------------------------------- */
 
