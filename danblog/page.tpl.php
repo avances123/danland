@@ -4,41 +4,51 @@
 <div <?php print danland_page_class($page['sidebar_first'], $page['sidebar_second']); ?>>
 <div id="header">
 <div id="header-wrapper">
-        <div id="header-first">
-          <?php if ($logo): ?> 
-          <div class="logo">
-            <a href="<?php print $base_path ?>" title="<?php print t('Home') ?>"><img src="<?php print $logo ?>" alt="<?php print t('Home') ?>" /></a>
-          </div>
-          <?php endif; ?>
-        </div><!-- end header-first -->
-       <div id="header-middle">
-	  <?php if ($site_name) : ?>
-		<?php if ($is_front) : ?>
-			<h1 class="site-name"><a href="<?php print $base_path ?>" title="<?php print $site_name ?>"><?php print $site_name ?></a></h1>
-		<?php endif; ?>
-		<?php if (!$is_front) : ?>
-			<h2 class="site-name"><a href="<?php print $base_path ?>" title="<?php print $site_name ?>"><?php print $site_name ?></a></h2>
-			<?php endif; ?>
+	<?php if ($logo): ?> 
+		<div id="logo-wrapper">
+			<div class="logo">
+				<a href="<?php print $base_path ?>" title="<?php print t('Home') ?>"><img src="<?php print $logo ?>" alt="<?php print t('Home') ?>" /></a>
+			</div>
+		</div><!-- end logo wrapper -->
 	<?php endif; ?>
-	<?php if ($site_slogan) : ?><div class='site-slogan'><?php print $site_slogan; ?></div><?php endif; ?>
-        </div><!-- end header-middle -->
+	<?php if ($site_name || $site_slogan) : ?>
+		<div id="branding-wrapper">
+			<?php if ($site_name) : ?>
+				<?php if ($is_front) : ?>
+					<h1 class="site-name"><a href="<?php print $base_path ?>" title="<?php print $site_name ?>"><?php print $site_name ?></a></h1>
+				<?php endif; ?>
+				<?php if (!$is_front) : ?>
+					<h2 class="site-name"><a href="<?php print $base_path ?>" title="<?php print $site_name ?>"><?php print $site_name ?></a></h2>
+				<?php endif; ?>
+			<?php endif; ?>
+			<?php if ($site_slogan) : ?>
+				<div class='site-slogan'><?php print $site_slogan; ?></div>
+			<?php endif; ?>
+        	</div><!-- end branding wrapper -->
+	<?php endif; ?>
+	
 	<?php if ($page['search_box']): ?>
-        <div id="search-box">
-          <?php print render ($page['search_box']); ?>
-        </div><!-- /search-box -->
+		<div id="search-box">
+			<?php print render ($page['search_box']); ?>
+		</div><!-- /search-box -->
 	<?php endif; ?>
 
-	<div id="authorize">
-	<?php if (!$logged_in): ?>
-      <ul><?php global $user; if ($user->uid != 0) { print '<li class="first">' .t('Logged in as '). '<a href="' .url('user/'.$user->uid). '">' .$user->name. '</a></li>'; print '<li><a href="' .url('user/logout'). '">' .t('Logout'). '</a></li>'; } else { print '<li class="first"><a href="' .url('user'). '">' .t('Login'). '</a></li>'; print '<li><a href="' .url('user/register'). '">' .t('Register'). '</a></li>'; } ?></ul>
+	<?php if ($feed_icons): ?>
+		<div class="feed-wrapper">
+			<?php print $feed_icons; ?>
+		</div>
 	<?php endif; ?>
-	  <?php print $feed_icons; ?>
-  </div>
+
+	<?php if (!$logged_in): ?>
+		<div id="authorize">
+      		<ul><?php print '<li class="first"><a href="' .url('user'). '">' .t('Login'). '</a></li>'; print '<li><a href="' .url('user/register'). '">' .t('Register'). '</a></li>'; ?></ul>
+		</div>
+	<?php endif; ?>
 
       </div><!-- end header-wrapper -->
-
 </div> <!-- /header -->
 <div style="clear:both"></div>
+
 <div id="menu">
 <div id="rounded-menu-left"></div>
  <?php if ($main_menu || $page['superfish_menu']): ?>

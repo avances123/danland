@@ -126,7 +126,7 @@ width: 950px;
 margin: 0 auto;
 }
 
-#header-first {
+#logo-wrapper {
 float: left;
 }
 
@@ -139,7 +139,7 @@ margin-left: 15px;
 height:50px;
 }
 
-#header-middle {
+#branding-wrapper {
 float: left;
 margin-top: 25px;
 }
@@ -749,8 +749,9 @@ font-size: 0.9em;
 padding-left: 1em;
 }
 
-.node .picture, .comment .picture {
+.node .user-picture, .comment .user-picture {
 float: right;
+margin-left: 10px;
 }
 
 .node-book .links {
@@ -1284,7 +1285,7 @@ margin-top:10px;
 
 #authorize { 
 float: right;
-padding-top: 5px;
+margin: 5px 10px 0;
 }
 
 #authorize ul { 
@@ -1309,8 +1310,10 @@ font-size: 12px;
 line-height: 13px; 
 }
 
-#authorize a.feed-icon { 
-padding-right: 20px;
+.feed-wrapper {
+float:right;
+margin-top:7px;
+margin-right:20px;
 }
 
 /* Bottom teaser
@@ -1457,4 +1460,19 @@ padding-left: 5px;
 #subnav-wrapper ul li,#subnav-wrapper ul li a { 
 font-size: 12px; 
 line-height: 13px; 
+}
+
+/* Overlay
+-------------------------------------------------------------- */
+
+.overlay #header, .overlay #menu, .overlay .block-block, .overlay #bottom-teaser, .overlay #bottom-wrapper, .overlay #footer-wrapper {
+display:none;
+}
+
+.overlay #wrapper {
+width:96%;
+}
+
+.theme-info ul {
+list-style-image:none;
 }
