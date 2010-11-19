@@ -485,6 +485,10 @@ display:block;
 float:left;
 }
 
+#preface .contextual-links a{
+text-decoration:none;
+}
+
 #preface .block-title {
 margin-top:20px;
 }
@@ -556,6 +560,10 @@ color:#002054;
 display:block;
 float:right;
 line-height:1.2em;
+}
+
+#mission .contextual-links {
+font-size: 84%;
 }
 
 #mission .block-title {
@@ -673,6 +681,10 @@ margin-bottom: -10px;
 
 table {
 width:100%;
+}
+
+div.contextual-links-wrapper {
+font-size:100%;
 }
 
 /* Nodes
@@ -1470,7 +1482,7 @@ display:none;
 }
 
 .overlay #wrapper {
-width:96%;
+width:98%;
 }
 
 .theme-info ul {

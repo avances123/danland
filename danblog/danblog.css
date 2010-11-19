@@ -91,6 +91,15 @@ margin:0 auto;
 font-size:1.4em;
 display:block;
 line-height:1.2em;
+font-family:Georgia, "Bitstream Vera Serif", serif;
+font-size: 20px;
+font-style:italic;
+}
+
+#mission .contextual-links {
+font-size: 13px;
+font-family: Verdana, Arial, Helvetica, sans-serif;
+font-style:normal;
 }
 
 #mission .block-title {
