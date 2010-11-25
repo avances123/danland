@@ -766,6 +766,10 @@ float: right;
 margin-left: 10px;
 }
 
+.node .user-picture img, .comment .user-picture img {
+width:60px;
+}
+
 .node-book .links {
 padding-top:5px;
 }
@@ -899,15 +903,6 @@ width: 100%;
 
 #forum td {
 padding: 0.5em;
-border: 1px solid #bbb;
-}
-
-#forum td.forum, #forum td.posts {
-background-color: #f4f4f4;
-}
-
-#forum td.topics, #forum td.last-reply {
-background-color: #f4f4f4;
 }
 
 #forum td.container {
@@ -945,8 +940,22 @@ dl dd {
 margin: 0 0 .5em 1em;
 }
 
-tr.even, tr.odd {
+tr.odd {
 background-color:#f4f4f4;
+}
+
+tr.even {
+background-color:#fcfcfc;
+}
+
+th {
+text-align:left;
+background: #E6E6E6;
+}
+
+tr td, tr th {
+border:1px solid #bbb;
+padding: 0 6px;
 }
 
 /* Tracker + Profile
