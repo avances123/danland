@@ -822,6 +822,13 @@ margin-bottom: 1em;
 padding: 0.3em 10px;
 }
 
+.field-type-taxonomy-term-reference .field-label, .field-type-taxonomy-term-reference .field-items, .field-type-taxonomy-term-reference .field-item {
+display:inline;
+float:left;
+font-weight:normal;
+padding-right:10px;
+}
+
 /* Comments
 -------------------------------------------------------------- */
 
@@ -1263,6 +1270,7 @@ background-image: none;
 .comment .links {
 text-align: left;
 padding-left: 0;
+padding-top:5px;
 }
 
 ul.primary li a {
