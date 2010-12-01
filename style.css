@@ -669,10 +669,6 @@ margin-left: 18px;
 margin-bottom: 5px;
 }
 
-.book-navigation .menu {
-margin-bottom: 15px;
-}
-
 #notice {
 font-size: 10px;
 text-align:center;
@@ -1286,6 +1282,8 @@ text-decoration:none;
 
 .book-navigation .menu {
 border-top:1px solid #bbb;
+margin:0;
+padding:10px 20px;
 }
 
 .book-navigation .page-links {
