@@ -253,7 +253,7 @@ float:left;
 }
 
 #superfish .region-superfish-menu {
-position:absolute;
+position:relative;
 z-index:6;
 }
 
