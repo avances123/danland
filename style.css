@@ -257,6 +257,10 @@ position:relative;
 z-index:6;
 }
 
+#superfish .contextual-links-region {
+float: left;
+}
+
 #superfish h2 {
 height: 0;
 overflow: hidden;
