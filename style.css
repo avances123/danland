@@ -252,13 +252,9 @@ height:35px;
 float:left;
 }
 
-#superfish .region-superfish-menu {
-position:relative;
-z-index:6;
-}
-
 #superfish .contextual-links-region {
 float: left;
+z-index:6;
 }
 
 #superfish h2 {
