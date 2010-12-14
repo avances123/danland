@@ -1,0 +1,18 @@
+/* $Id$ */
+
+#content-maintenance {
+font-size:1.6em;
+color:#002054;
+display:block;
+float:right;
+line-height:1.2em;
+margin:20px;
+}
+
+#preface .title {
+margin: 20px;
+color:#fff;
+display:block;
+float:left;
+}
+
