@@ -476,12 +476,6 @@ z-index:2;
 overflow: hidden;
 }
 
-.slideshow IMG {
-top:0;
-left:0;
-z-index:8;
-}
-
 #preface {
 margin: 20px;
 font-size:1.2em;
@@ -595,37 +589,37 @@ float: left;
 /* Sidebar regions
 -------------------------------------------------------------- */
 
-#sidebar-side-1 #sidebar-left {
+#layout-type-1 #sidebar-left {
 width: 26%;
 float: left;
 font-size:12px;	
 }
 
-#sidebar-side-2 #sidebar-left {
+#layout-type-2 #sidebar-left {
 width: 21%;
 float: left;
 margin-right: 2%;
 font-size:12px;	
 }
 
-.sidebars-1 #content{
+.one-sidebar #content{
 width: 69%;
 margin-left: 25px;
 float: left;
 }
 
-.sidebars-2 #content{
+.two-sidebars #content{
 width: 54%;
 float: left;
 }
 
-#sidebar-side-1 #sidebar-right {
+#layout-type-1 #sidebar-right {
 width: 26%;
 float: right;
 font-size:12px;	      
 }
 
-#sidebar-side-2 #sidebar-right {
+#layout-type-2 #sidebar-right {
 width: 21%;
 float: right;
 font-size:12px;	      

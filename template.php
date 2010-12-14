@@ -2,26 +2,28 @@
 // $Id$
 function danland_page_class($sidebar_first, $sidebar_second) {
 	if ($sidebar_first && $sidebar_second) {
-		$class = 'sidebars-2';
-		$id = 'sidebar-side-2';	
+		$id = 'layout-type-2';	
 	}
 	else if ($sidebar_first || $sidebar_second) {
-		$class = 'sidebars-1';
-		$id = 'sidebar-side-1';
+		$id = 'layout-type-1';
 	}
 
 	if(isset($id)) {
 		print ' id="'. $id .'"';
 	}
-	
-	if(isset($class)) {
-		print ' class="'. $class .'"';
-	}
-
 }
 
-function danland_preprocess_html(&$variables) {
-  drupal_add_css(path_to_theme() . '/style.ie6.css', array('group' => CSS_THEME, 'browsers' => array('IE' => 'IE 6', '!IE' => FALSE), 'preprocess' => FALSE));
+function danland_preprocess_html(&$vars) {
+  // Add conditional CSS for IE6.
+drupal_add_css(path_to_theme() . '/style.ie6.css', array('group' => CSS_THEME, 'browsers' => array('IE' => 'IE 6', '!IE' => FALSE), 'preprocess' => FALSE));
+}
+
+function danland_preprocess_maintenance_page(&$variables) {
+  if (!$variables['db_is_active']) {
+    unset($variables['site_name']);
+  }
+  drupal_add_css(drupal_get_path('theme', 'danland') . '/maintenance.css');
+  drupal_add_js(drupal_get_path('theme', 'danland') . '/scripts/jquery.cycle.all.js');
 }
 
 if (drupal_is_front_page()) {
