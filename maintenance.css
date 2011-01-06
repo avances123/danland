@@ -16,3 +16,14 @@ display:block;
 float:left;
 }
 
+div.messages {
+width:950px;
+margin:20px auto;
+position:relative;
+padding:0;
+}
+
+div.messages ul {
+padding:10px 10px 10px 50px;
+}
+
