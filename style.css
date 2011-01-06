@@ -650,6 +650,14 @@ border-top: 1px solid #ddd;
 margin:0 0 15px;
 }
 
+.sidebar tbody {
+border: none;
+}
+.sidebar tr.even,
+.sidebar tr.odd {
+background: none;
+}
+
 /* Misc.
 -------------------------------------------------------------- */
 
@@ -684,6 +692,10 @@ font-size:100%;
 
 /* Nodes
 -------------------------------------------------------------- */
+
+#first-time {
+margin-bottom:10px;
+}
 
 .node {
 border-bottom: 1px solid #bbb;
