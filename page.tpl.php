@@ -1,5 +1,4 @@
 <?php
-// $Id$
 ?>
 <div <?php print danland_page_class($page['sidebar_first'], $page['sidebar_second']); ?>>
 <div id="header">

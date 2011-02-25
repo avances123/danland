@@ -1,4 +1,3 @@
-// $Id$
 (function($){
 	/* hoverIntent by Brian Cherne */
 	$.fn.hoverIntent = function(f,g) {

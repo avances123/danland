@@ -1,5 +1,4 @@
 <?php
-// $Id$
 ?>
 <div class="<?php print $classes; ?> clearfix"<?php print $attributes; ?>>
   <?php print $picture ?>

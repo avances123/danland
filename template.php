@@ -1,5 +1,4 @@
 <?php
-// $Id$
 function danland_page_class($sidebar_first, $sidebar_second) {
 	if ($sidebar_first && $sidebar_second) {
 		$id = 'layout-type-2';	
