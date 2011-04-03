@@ -79,9 +79,9 @@
 <?php if ($page['highlighted']) : ?><div id="slideshow-bottom">
 <div id="mission"><?php print render ($page['highlighted']); ?></div></div><?php endif; ?>
 <div class="slideshow">
-<img src="<?php print $base_path . $directory; ?>/images/slideshows/sea.jpg" width="950" height="355" alt="slideshow 1"/>
-<img src="<?php print $base_path . $directory; ?>/images/slideshows/noon.jpg" width="950" height="355" alt="slideshow 2"/>
-<img src="<?php print $base_path . $directory; ?>/images/slideshows/snow.jpg" width="950" height="355" alt="slideshow 3"/>
+<img src="<?php print $base_path . $directory; ?>/images/fuertescusa/1.png" width="950" height="355" alt="slideshow 1"/>
+<img src="<?php print $base_path . $directory; ?>/images/fuertescusa/2.png" width="950" height="355" alt="slideshow 2"/>
+<img src="<?php print $base_path . $directory; ?>/images/fuertescusa/3.png" width="950" height="355" alt="slideshow 3"/>
 </div>
 </div>
 </div>
