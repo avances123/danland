@@ -222,6 +222,6 @@
 </div> <!-- end footer wrapper -->
 
 <div style="clear:both"></div>
-<div id="notice"><p>Theme by <a href="http://blog.avances123.com">Avances123</a></p></div>
+<!-- <div id="notice"><p>Theme by <a href="http://blog.avances123.com">Avances123</a></p></div> -->
 
 </div>
