@@ -123,6 +123,7 @@ height: 66px;
 position: relative;
 width: 950px;
 margin: 0 auto;
+background:url(images/boomerang_02.png) repeat-x;
 }
 
 #logo-wrapper {
@@ -149,8 +150,9 @@ font-weight: bold;
 font-size: 25px;
 margin-left: 15px;
 position: relative;
-font-family: Verdana, Tahoma;
-font-style: italic;
+/*font-family: Verdana, Tahoma;*/
+font-family: Arial;
+/*font-style: italic;*/
 }
 
 .site-slogan {
